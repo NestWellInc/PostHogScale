@@ -1,0 +1,135 @@
+[
+  {
+    "billing": "one_time",
+    "checkout_url": "https://book.stripe.com/14A14g2cb9he5kR7ua87K0g",
+    "details": {
+      "Included": [
+        "One CSV quality report; source unchanged",
+        "UTF-8 or UTF-8-SIG CSV input",
+        "Original source preserved",
+        "Deterministic local processing",
+        "Machine-readable work record"
+      ],
+      "Requires separate scope": [
+        "Ambiguous or changing requirements",
+        "External-system integrations",
+        "Unsupported file formats",
+        "Work exceeding the stated offer limit"
+      ],
+      "Review boundary": [
+        "Exceptions and worker failures are routed for review instead of silently producing a questionable result."
+      ]
+    },
+    "id": "csv_audit",
+    "price_usd": 15,
+    "scope": "One CSV quality report; source unchanged",
+    "title": "CSV Data Quality Audit"
+  },
+  {
+    "billing": "one_time",
+    "checkout_url": "https://book.stripe.com/00wdR2bMLeBy9B74hY87K0d",
+    "details": {
+      "Included": [
+        "One bounded CSV cleanup and report",
+        "UTF-8 or UTF-8-SIG CSV input",
+        "Original source preserved",
+        "Deterministic local processing",
+        "Machine-readable work record"
+      ],
+      "Requires separate scope": [
+        "Ambiguous or changing requirements",
+        "External-system integrations",
+        "Unsupported file formats",
+        "Work exceeding the stated offer limit"
+      ],
+      "Review boundary": [
+        "Exceptions and worker failures are routed for review instead of silently producing a questionable result."
+      ]
+    },
+    "id": "csv_cleanup",
+    "price_usd": 35,
+    "scope": "One bounded CSV cleanup and report",
+    "title": "CSV Cleanup + Normalization"
+  },
+  {
+    "billing": "one_time",
+    "checkout_url": "https://book.stripe.com/fZu7sE0437968x38ye87K0e",
+    "details": {
+      "Included": [
+        "One contractor job-cost CSV normalization",
+        "UTF-8 or UTF-8-SIG CSV input",
+        "Original source preserved",
+        "Deterministic local processing",
+        "Machine-readable work record"
+      ],
+      "Requires separate scope": [
+        "Ambiguous or changing requirements",
+        "External-system integrations",
+        "Unsupported file formats",
+        "Work exceeding the stated offer limit"
+      ],
+      "Review boundary": [
+        "Exceptions and worker failures are routed for review instead of silently producing a questionable result."
+      ]
+    },
+    "id": "contractor_normalize",
+    "price_usd": 49,
+    "scope": "One contractor job-cost CSV normalization",
+    "title": "Contractor Job-Cost CSV Normalization"
+  },
+  {
+    "billing": "one_time",
+    "checkout_url": "https://book.stripe.com/eVqdR2aIH8da8x36q687K0f",
+    "details": {
+      "Included": [
+        "Up to ten bounded CSV files",
+        "UTF-8 or UTF-8-SIG CSV input",
+        "Original source preserved",
+        "Deterministic local processing",
+        "Machine-readable work record"
+      ],
+      "Requires separate scope": [
+        "Ambiguous or changing requirements",
+        "External-system integrations",
+        "Unsupported file formats",
+        "Work exceeding the stated offer limit"
+      ],
+      "Review boundary": [
+        "Exceptions and worker failures are routed for review instead of silently producing a questionable result."
+      ]
+    },
+    "id": "batch_sprint",
+    "price_usd": 99,
+    "scope": "Up to ten bounded CSV files",
+    "title": "Multi-File Data Processing Sprint"
+  },
+  {
+    "billing": "monthly",
+    "checkout_url": "https://buy.stripe.com/eVq3co9EDdxu6oV4hY87K0h",
+    "details": {
+      "Included": [
+        "One business",
+        "Two bounded CSV requests per month",
+        "Unused requests do not roll over",
+        "UTF-8 or UTF-8-SIG CSV input",
+        "Original source preserved",
+        "Deterministic local processing",
+        "Machine-readable work record"
+      ],
+      "Requires separate scope": [
+        "Ambiguous or changing requirements",
+        "External-system integrations",
+        "Unsupported file formats",
+        "Work exceeding the stated offer limit"
+      ],
+      "Review boundary": [
+        "Exceptions and worker failures are routed for review instead of silently producing a questionable result."
+      ]
+    },
+    "id": "data_maintenance",
+    "price_usd": 59,
+    "scope": "Two bounded requests per month; no rollover",
+    "title": "Data Maintenance Plan"
+  }
+]
+
