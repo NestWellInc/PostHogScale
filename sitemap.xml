@@ -1,9 +1,7 @@
-Exit code: 0
-Wall time: 0.1 seconds
-Output:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/index.html</loc></url>
+  <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/csv-quick-check.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/csv-data-quality-audit.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/find-duplicate-rows-csv.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/check-missing-values-csv.html</loc></url>
@@ -12,4 +10,3 @@ Output:
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/privacy.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/terms.html</loc></url>
 </urlset>
-
