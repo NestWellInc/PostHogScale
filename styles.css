@@ -6,3 +6,4 @@
 .status { min-height: 1.5em; }
 #results { border-top: 4px solid #22577a; margin: 2rem 0; padding-top: 1rem; }
 #summary p { font-size: 1.5rem; font-weight: 700; margin: .25rem 0; }
+.proof{background:#fff;border:1px solid var(--line);border-radius:.8rem;padding:1rem}.disclosure{margin-top:0;color:var(--muted)}.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.sample-table h3{margin:.2rem 0}.table-scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.83rem}th,td{border:1px solid var(--line);padding:.4rem;text-align:left;white-space:nowrap}th{background:#e8f0e9}@media(max-width:800px){.sample-grid{grid-template-columns:1fr}}
