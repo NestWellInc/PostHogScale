@@ -1,0 +1,33 @@
+# ProjectScale
+
+> Fixed-scope CSV and data services for small businesses and contractors, plus free browser-only CSV quality tools.
+
+## Services
+- CSV Data Quality Audit — $15 one-time — one CSV quality report; source unchanged.
+- CSV Cleanup + Normalization — $35 one-time — one bounded CSV cleanup and report, up to 100 data rows.
+- Contractor Job-Cost CSV Normalization — $49 one-time — one contractor job-cost CSV normalization.
+- Multi-File Data Processing Sprint — $99 one-time — up to ten bounded CSV files.
+- Data Maintenance Plan — $59/month — two bounded CSV requests per month for one business; unused requests do not roll over.
+
+Service catalog and Stripe checkout: https://raw.githack.com/NestWellInc/PostHogScale/main/index.html
+
+## Free tools and guides
+- CSV Quick Check: https://raw.githack.com/NestWellInc/PostHogScale/main/csv-quick-check.html
+- CSV Data Quality Audit guide: https://raw.githack.com/NestWellInc/PostHogScale/main/csv-data-quality-audit.html
+- Find duplicate CSV rows: https://raw.githack.com/NestWellInc/PostHogScale/main/find-duplicate-rows-csv.html
+- Check missing CSV values: https://raw.githack.com/NestWellInc/PostHogScale/main/check-missing-values-csv.html
+- CSV cleanup and normalization: https://raw.githack.com/NestWellInc/PostHogScale/main/csv-cleanup-normalization.html
+- Contractor job-cost CSV help: https://raw.githack.com/NestWellInc/PostHogScale/main/contractor-job-cost-csv.html
+
+## Processing boundaries
+- Listed offers support UTF-8 or UTF-8-SIG CSV input unless separately scoped.
+- Original source files are preserved.
+- Bounded work uses deterministic local processing.
+- Exceptions, ambiguous requirements, and worker failures are routed for review.
+- External-system integrations, unsupported formats, and work beyond listed limits require separate scope.
+
+## Privacy
+The public static site uses no cookies, analytics, customer-upload forms, or data-collection forms. The free CSV Quick Check runs in the browser and does not upload the selected CSV.
+
+Privacy: https://raw.githack.com/NestWellInc/PostHogScale/main/privacy.html
+Terms: https://raw.githack.com/NestWellInc/PostHogScale/main/terms.html
