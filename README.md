@@ -18,6 +18,15 @@ Check a CSV for blank cells, exact duplicate rows, inconsistent row widths, and 
 
 [Run the free CSV Quick Check](https://raw.githack.com/NestWellInc/PostHogScale/main/csv-quick-check.html)
 
+### What to do after the free check
+
+- If you only need a documented quality review, use the **$15 CSV Data Quality Audit**.
+- If the file needs cleanup or normalization, use the **$35 CSV Cleanup + Normalization** service.
+- If you have multiple files, use the **$99 Multi-File Data Processing Sprint**.
+- If this is recurring work, use the **$59/month Data Maintenance Plan**.
+
+[Compare all services and checkout securely](https://raw.githack.com/NestWellInc/PostHogScale/main/start-here.html)
+
 ## Available services
 
 - CSV Data Quality Audit — $15 one-time
