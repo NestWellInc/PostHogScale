@@ -2,6 +2,16 @@
 
 Private, practical CSV help for small businesses and contractors.
 
+## Start here
+
+Not sure which service fits? Use the service chooser first:
+
+[Choose the right ProjectScale service](https://raw.githack.com/NestWellInc/PostHogScale/main/start-here.html)
+
+Want to understand fulfillment before buying?
+
+[See how ProjectScale works](https://raw.githack.com/NestWellInc/PostHogScale/main/how-it-works.html)
+
 ## Free browser-only CSV Quick Check
 
 Check a CSV for blank cells, exact duplicate rows, inconsistent row widths, and basic structure—entirely inside your browser. The file is never uploaded, tracked, or stored.
@@ -18,7 +28,13 @@ Check a CSV for blank cells, exact duplicate rows, inconsistent row widths, and 
 
 Every service preserves the original source, uses deterministic local processing, and routes exceptions for review.
 
-[View service details and secure Stripe checkout](https://raw.githack.com/NestWellInc/PostHogScale/main/index.html)
+[View all service details and secure Stripe checkout](https://raw.githack.com/NestWellInc/PostHogScale/main/index.html)
+
+### Higher-value and recurring offers
+
+[Multi-File Data Processing Sprint — $99](https://raw.githack.com/NestWellInc/PostHogScale/main/multi-file-data-processing.html)
+
+[Data Maintenance Plan — $59/month](https://raw.githack.com/NestWellInc/PostHogScale/main/data-maintenance-plan.html)
 
 ## Practical CSV guides
 
