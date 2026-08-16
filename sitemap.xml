@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/index.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/start-here.html</loc></url>
+  <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/service-comparison.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/how-it-works.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/csv-quick-check.html</loc></url>
   <url><loc>https://raw.githack.com/NestWellInc/PostHogScale/main/csv-data-quality-audit.html</loc></url>
