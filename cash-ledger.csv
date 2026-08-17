@@ -1,0 +1,2 @@
+date,channel,offer,gross_usd,platform_fee_usd,processor_fee_usd,other_approved_cost_usd,verified_net_usd,status,evidence
+2026-08-16,,,0.00,0.00,0.00,0.00,0.00,NO_VERIFIED_SALES,"No completed paid transaction observable from connected tools"
