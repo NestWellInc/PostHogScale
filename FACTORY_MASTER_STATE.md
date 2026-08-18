@@ -17,7 +17,7 @@ Generate legitimate verified net cash sufficient to cover the owner's ongoing Ch
 
 ## Hard operating constraints
 - Paid ads remain frozen unless the owner explicitly changes that rule.
-- Do not buy subscriptions, inventory, Lovable credits, storefront upgrades, or other paid resources without explicit approval.
+- Do not buy subscriptions, inventory, Lovable credits, storefront upgrades, listing/setup fees, or other paid resources without explicit approval.
 - Never impersonate the owner or fabricate qualifications, experience, reviews, testimonials, identity, account history, or customer results.
 - Never bypass KYC, qualification tests, CAPTCHAs, paywalls, anti-bot controls, account limits, identity checks, or platform controls.
 - Verify project/platform AI rules before automating paid work.
@@ -45,7 +45,7 @@ Current commercial ladder discovered/implemented in the repository:
 - $99 Multi-File Data Processing Sprint
 - $59/month Data Maintenance Plan
 
-Public/repository funnel assets that have been added or surfaced include:
+Public/repository funnel assets include:
 - main service catalog
 - Start Here chooser
 - service-comparison page
@@ -53,7 +53,7 @@ Public/repository funnel assets that have been added or surfaced include:
 - After Checkout intake/payment-matching page
 - dedicated $99 Multi-File Sprint page
 - dedicated $59/month Maintenance Plan page
-- free CSV Quick Check and related CSV lead magnets/tools
+- free CSV Quick Check and related lead magnets/tools
 - `llms.txt`
 - sitemap / robots discoverability improvements
 - owner cash launch dashboard
@@ -67,9 +67,11 @@ Public/repository funnel assets that have been added or surfaced include:
 - persistent cash-first execution issue
 
 ## Foremanly Systems branch
-Foremanly Systems is now an active Factory company focused on CSV and spreadsheet data-quality work.
+Foremanly Systems is an active Factory company focused on CSV and spreadsheet data-quality work.
 
-Canonical Foremanly state: `FOREMANLY_MASTER_STATE.md`
+Canonical Foremanly files:
+- `FOREMANLY_MASTER_STATE.md` — authoritative Foremanly operating state
+- `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md` — current product IDs, platform-policy findings, channel roles, and product backlog
 
 Foremanly core scope:
 - identify duplicates
@@ -86,20 +88,47 @@ Foremanly operating emphasis:
 - reversible, auditable cleanup
 - no silent source-file mutation
 
-Normal ChatGPT and Work/desktop sessions should use `FOREMANLY_MASTER_STATE.md` as the detailed operating source of truth for Foremanly and fold material commercial results back into this parent Factory file when they affect Factory-wide priorities, cash, spend, blockers, or channel strategy.
+### Foremanly Shopify implementation — 2026-08-18
+Connected store: `foremanlysystems.myshopify.com`
 
-An hourly Foremanly Growth Engine is active at the maximum supported automation frequency. It should advance legitimate research, positioning, offers, templates, SOPs, customer acquisition preparation, pricing analysis, and other reversible work, while stopping for owner approval on purchases, legal/KYC attestations, identity-dependent actions, and other high-risk or irreversible steps.
+Six products now exist as **DRAFT** Shopify products pending fulfillment/assets/intake/checkout QA:
+- **$19 CSV Data Quality Audit** — `gid://shopify/Product/8053958508587`
+- **$49 CSV & Spreadsheet Cleanup** — `gid://shopify/Product/8053958705195`
+- **$59 Shopify Product CSV Preflight & Cleanup** — `gid://shopify/Product/8053958770731`
+- **$59 CRM Contact CSV Cleanup** — `gid://shopify/Product/8053958901803`
+- **$99 Multi-File Cleanup & Normalization** — `gid://shopify/Product/8053959032875`
+- **$12 CSV Quality Control Template Pack** — `gid://shopify/Product/8053959229483`
+
+Do not activate these merely because they exist. Before publication, verify digital/service fulfillment, remove shipping where appropriate, create/attach toolkit assets, add intake/file-upload instructions, add synthetic/authorized visuals, and test checkout/post-purchase instructions.
+
+### Foremanly channel findings — 2026-08-18
+- Shopify officially supports services and digital products; use appropriate service/digital fulfillment.
+- Shopify product-CSV cleanup is a validated merchant pain point. A current Shopify App Store entrant launched June 2026 around import-breaking CSV errors, supporting Foremanly's specialized Shopify CSV preflight offer.
+- TikTok should be treated primarily as an organic marketing/education channel for Foremanly. Current U.S. TikTok Shop rules prohibit ordinary services, while virtual/digital products require applicable approval and current Virtual Goods eligibility is invite-only. Do not assume Foremanly's services/templates are TikTok Shop eligible.
+- Fiverr remains a priority service marketplace; current policy permits responsible AI-assisted work when customized, high-quality, and freelancer-accountable.
+- Upwork Project Catalog is a suitable predefined-service rail for the $19/$49/$59/$99 ladder.
+- Payhip Free Forever is currently $0/month + 5% transaction fee plus processor fees; suitable for digital toolkits and potentially bounded commissions.
+- Ko-fi Free currently has no monthly fee and charges 5% on Shop/Commissions plus processor fees; suitable for digital products and service requests.
+- Gumroad supports digital and service-type products but current direct-sale fees are materially higher and service restrictions apply; treat as secondary.
+- Etsy supports seller-designed digital downloads/made-to-order digital files but currently has listing/transaction fees and may have a setup fee; publication remains spend-gated pending explicit owner approval.
+
+### Foremanly automation state
+`Foremanly Growth Engine` is active **hourly**, the maximum supported automation frequency. Its prompt now uses the correct CSV/spreadsheet data-quality company definition, prioritizes durable revenue/operations assets, and instructs connected runs to read/update `FACTORY_MASTER_STATE.md` and `FOREMANLY_MASTER_STATE.md` when possible.
+
+An older hourly `Foremanly Research` automation was still focused on a superseded contractor-tools business model. It was disabled and renamed `Foremanly Research — Retired` on 2026-08-18 to prevent wasted/conflicting research cycles.
+
+Normal ChatGPT and Work/desktop sessions should read `FOREMANLY_MASTER_STATE.md` after this parent file when advancing Foremanly. Fold material commercial results back into this parent file when they affect Factory-wide priorities, cash, spend, blockers, or channel strategy.
 
 ## Product / service pricing architecture
 Use current live-platform constraints and actual buyer scope, but preserve this economic ladder unless evidence materially changes:
-- **$15–$25:** bounded acquisition / starter services
+- **$12–$25:** digital toolkit / bounded acquisition / starter services
 - **$35–$60+:** structured cleanup, validation, consolidation, import/report-ready preparation
-- **$80–$125+:** reporting/dashboard/executive-summary work where scope supports it
+- **$80–$125+:** multi-file processing, reporting/dashboard/executive-summary work where scope supports it
 - **$95+:** reusable cleanup/extraction/reporting workflow or script
 - **$150–$300+ and higher:** scoped authorized business/data automation when complexity warrants it
-- **$59/month maintenance:** only where recurring need has been demonstrated
+- recurring maintenance: only where repeat need has been demonstrated
 
-Do not silently expand $15 starter scope to win larger jobs.
+Do not silently expand starter scope to win larger jobs.
 
 ## Fiverr
 Priority channel when owner-authenticated publication is available.
@@ -111,6 +140,8 @@ Prepared first Gig concept:
 - keep Fiverr-originated buyer communication/payment on Fiverr where Fiverr requires it
 - do not put direct Stripe/contact details in the Fiverr Gig to divert Fiverr-originated business
 
+Foremanly's newer Shopify ladder can be mirrored into Fiverr after current category/package fields are verified.
+
 Owner-controlled gates:
 - authenticated login
 - identity/KYC/phone/tax/business verification where requested
@@ -120,11 +151,11 @@ Owner-controlled gates:
 - any newly presented fee is a hard stop pending explicit owner approval
 
 ## Ko-fi / Payhip / Gumroad
-**Ko-fi Free:** preferred no-monthly-cost service/storefront rail when authenticated. Historically verified as $0/month with 5% on relevant sales plus processor fees; recheck current terms before publication.
+**Ko-fi Free:** current no-monthly-cost rail; 5% service fee on Shop/Commissions plus processor fees. Suitable for service requests and small digital products.
 
-**Payhip Free Forever:** preferred no-monthly-cost digital-product rail; historically verified as $0/month with 5% transaction fee plus processor fees; recheck current terms before publication.
+**Payhip Free Forever:** current $0/month + 5% transaction fee plus processor fees. Preferred no-monthly-cost digital-product rail and potentially useful for bounded commission-style work.
 
-**Gumroad:** secondary for downloadable products; service-policy ambiguity was previously identified for AI-assisted externally fulfilled services. Reverify current policy before using it for CleanSheet services.
+**Gumroad:** supports digital and service-type products. Current standard direct-sale fee is 10% + $0.50 plus card processing, with higher Discover fees. Secondary rail; verify exact service eligibility before use.
 
 Do not buy storefront upgrades before verified sales justify them.
 
@@ -134,7 +165,10 @@ Do not buy storefront upgrades before verified sales justify them.
 - CSV Cleanup Automation Toolkit — target $19
 - Contractor Admin & Estimating Bundle — target $69 after QA
 
-Publish existing inventory before creating more low-ticket SKUs.
+Foremanly-specific digital product now drafted in Shopify:
+- CSV Quality Control Template Pack — $12; assets still need completion before publication
+
+Publish/finish high-fit existing inventory before creating many more low-ticket SKUs.
 
 ## Organic distribution
 Only use communities/threads whose current rules explicitly permit commercial / For Hire / self-promotional posts.
@@ -145,12 +179,15 @@ Only use communities/threads whose current rules explicitly permit commercial / 
 
 No unsolicited mass DMs. No duplicate same-day positioning variants where rules would make that spammy or noncompliant.
 
+TikTok organic content may be used for educational problem/solution marketing using synthetic examples; never expose client data.
+
 ## Higher-value adjacent services validated by market research
 - analysis-ready dataset preparation
 - workbook consolidation + validation + summary/dashboard preparation
 - recurring Excel/CSV report automation
 - reusable PDF-to-Excel extraction workflow for stable document layouts
 - import-ready / destination-spec CSV preparation
+- Shopify product-CSV preflight/cleanup
 - CRM/contact-list cleanup where buyer supplies legitimate data and destination spec
 - authorized portal workflow automation
 - structured-data → dashboard/report pipeline
@@ -172,14 +209,16 @@ Paper-trading only. Maintain at least two families:
 Test SPY, QQQ, IWM, and DIA with realistic fees/slippage; separate discovery/backtest from validation/paper-forward; compare against buy-and-hold; test raw and volatility-scaled trend signals separately; reject overfit one-ticker/one-period results. Never count hypothetical gains as Factory revenue.
 
 ## Current implementation priority
-1. **Owner-authenticated Fiverr publication of the already-prepared standard Marketplace Gig** if no unapproved paid verification/resource is required.
-2. Capture and record the public Gig URL plus any Fiverr-mandated scope/price changes.
-3. Execute exactly one current-rules-checked organic distribution action using the prepared owner post kit.
-4. Publish/mirror existing prepared digital products/services to authenticated zero-fixed-cost storefronts where still compatible.
-5. Advance Foremanly's reusable QA/reporting/intake templates and acquisition materials in parallel without delaying cash-generating publication.
-6. Qualify inquiries into bounded starter work versus larger cleanup/reporting/reusable automation.
-7. Offer recurring maintenance only when repeat need is demonstrated.
-8. Continue software/API and paper-research branches in parallel only when they do not delay the cash path.
+1. **Complete Foremanly's Shopify draft catalog for publication readiness without activating incomplete products:** build digital assets, intake/file upload, synthetic visuals, and checkout/fulfillment QA.
+2. **Owner-authenticated Fiverr publication of the already-prepared standard Marketplace Gig** if no unapproved paid verification/resource is required; adapt to Foremanly's current positioning where appropriate.
+3. Prepare an Upwork Project Catalog mirror for Foremanly's predefined service ladder.
+4. Prepare zero-monthly Payhip and Ko-fi mirrors for the digital toolkit and bounded service requests.
+5. Execute exactly one current-rules-checked organic distribution action using prepared owner materials when an authenticated channel is available.
+6. Use TikTok as an organic education/traffic funnel; do not force services/digital products into TikTok Shop without explicit current eligibility.
+7. Finish/publish compatible existing digital inventory before proliferating low-ticket SKUs.
+8. Qualify inquiries into audit, single-file cleanup, vertical import-ready cleanup, multi-file normalization, reusable workflow, or recurring maintenance.
+9. Offer recurring maintenance only when repeat need is demonstrated.
+10. Continue software/API and paper-research branches only when they do not delay the cash path.
 
 ## Owner interruption policy
 Interrupt the owner only for:
@@ -193,6 +232,6 @@ Interrupt the owner only for:
 When blocked on one channel, record the exact blocker and immediately advance another legitimate revenue pipe.
 
 ## Cross-chat operating rule
-This file is the canonical state bridge. Future research/prep from normal ChatGPT should be folded into this file when material. Tool-enabled Work/desktop sessions should read this file first, implement what can be implemented, and then update this file with the new verified state, live URLs, blockers, and cash results.
+This file is the canonical Factory state bridge. Future research/prep from normal ChatGPT should be folded into this file when material. Tool-enabled Work/desktop sessions should read this file first, implement what can be implemented, and then update this file with verified state, live URLs, blockers, and cash results.
 
-For Foremanly-specific execution, read `FOREMANLY_MASTER_STATE.md` immediately after this file and update both files when a Foremanly change materially affects Factory-wide cash, priorities, spend, blockers, or channel strategy.
+For Foremanly-specific execution, read `FOREMANLY_MASTER_STATE.md` immediately after this file and then `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md` when working on catalog/channel execution. Update this parent file when Foremanly changes materially affect Factory-wide cash, priorities, spend, blockers, or channel strategy.
