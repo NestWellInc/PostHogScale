@@ -91,7 +91,7 @@ Foremanly operating emphasis:
 ### Foremanly Shopify implementation — 2026-08-18
 Connected store: `foremanlysystems.myshopify.com`
 
-Six products now exist as **DRAFT** Shopify products pending fulfillment/assets/intake/checkout QA:
+Six products now exist as **DRAFT** Shopify products pending packaging/fulfillment/intake/checkout QA:
 - **$19 CSV Data Quality Audit** — `gid://shopify/Product/8053958508587`
 - **$49 CSV & Spreadsheet Cleanup** — `gid://shopify/Product/8053958705195`
 - **$59 Shopify Product CSV Preflight & Cleanup** — `gid://shopify/Product/8053958770731`
@@ -99,7 +99,9 @@ Six products now exist as **DRAFT** Shopify products pending fulfillment/assets/
 - **$99 Multi-File Cleanup & Normalization** — `gid://shopify/Product/8053959032875`
 - **$12 CSV Quality Control Template Pack** — `gid://shopify/Product/8053959229483`
 
-Do not activate these merely because they exist. Before publication, verify digital/service fulfillment, remove shipping where appropriate, create/attach toolkit assets, add intake/file-upload instructions, add synthetic/authorized visuals, and test checkout/post-purchase instructions.
+The core template-pack assets now exist in GitHub under `foremanly/template-pack/`: README, data-quality audit checklist, quality-report template, change/exception log, duplicate-rule worksheet, validation checklist, and intake/scope questionnaire.
+
+Do not activate the Shopify drafts merely because they exist. Before publication, package/attach the digital toolkit, configure digital/service fulfillment and shipping, add intake/file-upload instructions, add synthetic/authorized visuals, and test checkout/post-purchase behavior.
 
 ### Foremanly channel findings — 2026-08-18
 - Shopify officially supports services and digital products; use appropriate service/digital fulfillment.
@@ -165,10 +167,10 @@ Do not buy storefront upgrades before verified sales justify them.
 - CSV Cleanup Automation Toolkit — target $19
 - Contractor Admin & Estimating Bundle — target $69 after QA
 
-Foremanly-specific digital product now drafted in Shopify:
-- CSV Quality Control Template Pack — $12; assets still need completion before publication
+Foremanly-specific digital product:
+- CSV Quality Control Template Pack — $12; core component assets now exist in `foremanly/template-pack/`; package/attach and QA fulfillment before publication
 
-Publish/finish high-fit existing inventory before creating many more low-ticket SKUs.
+Finish/publish high-fit existing inventory before creating many more low-ticket SKUs.
 
 ## Organic distribution
 Only use communities/threads whose current rules explicitly permit commercial / For Hire / self-promotional posts.
@@ -209,7 +211,7 @@ Paper-trading only. Maintain at least two families:
 Test SPY, QQQ, IWM, and DIA with realistic fees/slippage; separate discovery/backtest from validation/paper-forward; compare against buy-and-hold; test raw and volatility-scaled trend signals separately; reject overfit one-ticker/one-period results. Never count hypothetical gains as Factory revenue.
 
 ## Current implementation priority
-1. **Complete Foremanly's Shopify draft catalog for publication readiness without activating incomplete products:** build digital assets, intake/file upload, synthetic visuals, and checkout/fulfillment QA.
+1. **Package and attach Foremanly's completed template-pack assets; configure Shopify digital/service fulfillment, intake, synthetic visuals, and checkout QA without activating incomplete products.**
 2. **Owner-authenticated Fiverr publication of the already-prepared standard Marketplace Gig** if no unapproved paid verification/resource is required; adapt to Foremanly's current positioning where appropriate.
 3. Prepare an Upwork Project Catalog mirror for Foremanly's predefined service ladder.
 4. Prepare zero-monthly Payhip and Ko-fi mirrors for the digital toolkit and bounded service requests.
