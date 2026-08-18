@@ -1,0 +1,13 @@
+validation_check,pre_clean_value,post_clean_value,pass_fail,notes
+Row count,,,,
+Column count,,,,
+Expected headers present,,,,
+Key uniqueness,,,,
+Required-field null count,,,,
+Duplicate count under agreed rule,,,,
+Malformed row count,,,,
+Date-format consistency,,,,
+Numeric-format consistency,,,,
+Identifier-format consistency,,,,
+Destination-specific constraints,,,,
+Unresolved exceptions documented,,,,
