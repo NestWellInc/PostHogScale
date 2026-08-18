@@ -66,6 +66,30 @@ Public/repository funnel assets that have been added or surfaced include:
 - `lead-pipeline.csv`
 - persistent cash-first execution issue
 
+## Foremanly Systems branch
+Foremanly Systems is now an active Factory company focused on CSV and spreadsheet data-quality work.
+
+Canonical Foremanly state: `FOREMANLY_MASTER_STATE.md`
+
+Foremanly core scope:
+- identify duplicates
+- identify missing values
+- identify formatting inconsistencies
+- identify structural problems
+- preserve the original source file
+- deliver a cleaned CSV/spreadsheet, concise quality report, and change/exception documentation
+
+Foremanly operating emphasis:
+- clearly defined projects
+- careful validation
+- dependable communication
+- reversible, auditable cleanup
+- no silent source-file mutation
+
+Normal ChatGPT and Work/desktop sessions should use `FOREMANLY_MASTER_STATE.md` as the detailed operating source of truth for Foremanly and fold material commercial results back into this parent Factory file when they affect Factory-wide priorities, cash, spend, blockers, or channel strategy.
+
+An hourly Foremanly Growth Engine is active at the maximum supported automation frequency. It should advance legitimate research, positioning, offers, templates, SOPs, customer acquisition preparation, pricing analysis, and other reversible work, while stopping for owner approval on purchases, legal/KYC attestations, identity-dependent actions, and other high-risk or irreversible steps.
+
 ## Product / service pricing architecture
 Use current live-platform constraints and actual buyer scope, but preserve this economic ladder unless evidence materially changes:
 - **$15–$25:** bounded acquisition / starter services
@@ -152,9 +176,10 @@ Test SPY, QQQ, IWM, and DIA with realistic fees/slippage; separate discovery/bac
 2. Capture and record the public Gig URL plus any Fiverr-mandated scope/price changes.
 3. Execute exactly one current-rules-checked organic distribution action using the prepared owner post kit.
 4. Publish/mirror existing prepared digital products/services to authenticated zero-fixed-cost storefronts where still compatible.
-5. Qualify inquiries into bounded starter work versus larger cleanup/reporting/reusable automation.
-6. Offer recurring maintenance only when repeat need is demonstrated.
-7. Continue software/API and paper-research branches in parallel only when they do not delay the cash path.
+5. Advance Foremanly's reusable QA/reporting/intake templates and acquisition materials in parallel without delaying cash-generating publication.
+6. Qualify inquiries into bounded starter work versus larger cleanup/reporting/reusable automation.
+7. Offer recurring maintenance only when repeat need is demonstrated.
+8. Continue software/API and paper-research branches in parallel only when they do not delay the cash path.
 
 ## Owner interruption policy
 Interrupt the owner only for:
@@ -169,3 +194,5 @@ When blocked on one channel, record the exact blocker and immediately advance an
 
 ## Cross-chat operating rule
 This file is the canonical state bridge. Future research/prep from normal ChatGPT should be folded into this file when material. Tool-enabled Work/desktop sessions should read this file first, implement what can be implemented, and then update this file with the new verified state, live URLs, blockers, and cash results.
+
+For Foremanly-specific execution, read `FOREMANLY_MASTER_STATE.md` immediately after this file and update both files when a Foremanly change materially affects Factory-wide cash, priorities, spend, blockers, or channel strategy.
