@@ -1,0 +1,6 @@
+rule_name,match_columns,match_type,normalization_before_match,keep_rule,remove_or_flag,notes
+Example exact email,email,Exact,"trim whitespace; lowercase",Keep first nonblank record,Flag,"Replace this example with project-specific rules"
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
