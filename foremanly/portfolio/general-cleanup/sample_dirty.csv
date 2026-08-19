@@ -1,0 +1,12 @@
+customer_id,full_name,email,phone,signup_date,status,amount_usd
+C001,"  Maya Chen ","MAYA.CHEN@EXAMPLE.COM ","(312) 555-0101",08/01/2026,Active,$125.00
+C002,"Luis Rivera",luis.rivera@example.com,,2026-08-02,active,75
+C003,"Jordan Patel",,"312-555-0103",8/3/26,ACTIVE,49.99
+C003,"Jordan Patel",jordan.patel@example.com,"3125550103",2026-08-03,Active,49.99
+C004,"Avery Thompson ",AVERY.THOMPSON@example.com,"312 555 0104",2026-08-04,ACTIVE,89.5
+C005," sam wilson",sam.wilson@example.com,"+1 312 555 0105",08-05-2026,inactive,$0.00
+C006,"Priya Shah",,"312-555-0106",2026/08/06,Active,199
+C007,"Noah Brooks",noah.brooks@EXAMPLE.COM,"312-555-0107",2026-08-07," active ",35.00
+C008,"Elena Garcia",elena.garcia@example.com,"312.555.0108",08/08/2026,Inactive,64
+C009,"Owen Kim",owen.kim@example.com,"3125550109",Aug 09 2026,ACTIVE,110
+C010,"Rina Davis",rina.davis@example.com,"312-555-0110",2026-08-10,Active,"$1,250.00"
