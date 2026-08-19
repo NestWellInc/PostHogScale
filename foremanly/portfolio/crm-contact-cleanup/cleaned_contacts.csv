@@ -1,0 +1,12 @@
+contact_id,first_name,last_name,email,phone,state,signup_date,company
+C001,Avery,Stone,avery.stone@example.com,+1-312-555-0101,IL,2026-08-01,Northwind Demo
+C002,Jordan,Lee,jordan.lee@example.com,+1-312-555-0102,IL,2026-08-02,Contoso Sample
+C003,Sam,Rivera,sam.rivera@example.com,+1-312-555-0103,IL,2026-08-03,Alpine Fictional
+C004,Taylor,Ng,taylor.ng@example.com,+1-312-555-0104,IL,2026-08-04,Blue Yonder Demo
+C005,Morgan,Patel,morgan.patel@example.com,+1-312-555-0105,IL,2026-08-05,Fabrikam Sample
+C006,Casey,Brooks,casey.brooks@example.com,+1-312-555-0106,IL,2026-08-06,Woodgrove Demo
+C007,Riley,Chen,riley.chen@example.com,+1-312-555-0107,IL,2026-08-07,Adventure Sample
+C008,Jamie,Kim,jamie.kim@example.com,,IL,2026-08-08,Lucerne Fictional
+C009,Drew,Martin,,+1-312-555-0109,IL,2026-08-09,Tailspin Demo
+C011,Robin,Diaz,robin.diaz@example.com,+1-312-555-0111,IL,2026-08-11,Wide World Sample
+C012,Alex,Moore,alex.moore@example.com,+1-312-555-0112,IL,2026-08-12,Fourth Coffee Demo
