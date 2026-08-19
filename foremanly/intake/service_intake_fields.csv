@@ -1,0 +1,35 @@
+field_key,customer_label,field_type,required,applies_to,validation_or_options,internal_purpose
+order_number,Shopify order number,text,yes,all,Non-empty,Match intake to purchase
+contact_email,Contact email,email,yes,all,Valid email,Project communication
+file_count,Number of files,integer,yes,all,1 or greater,Scope check
+file_types,File type(s),multi_select,yes,all,"CSV|XLSX|Google Sheets export|Other",Capability and tooling check
+approx_rows,Approximate rows per file,text,yes,all,Positive estimates,Scope and complexity
+approx_columns,Approximate columns per file,text,yes,all,Positive estimates,Scope and complexity
+output_format,Required output format,select,yes,all,"CSV|XLSX|Same as source|Other",Delivery requirement
+cleanup_goal,What should this project accomplish?,textarea,yes,services,Non-empty,Define acceptance intent
+checks_requested,Checks requested,multi_select,yes,services,"Duplicates|Missing values|Formatting|Structural issues|All",Define work scope
+destination_system,Destination system or import target,text,no,import_services,Blank or named system,Determine destination-specific validation
+destination_spec,Destination field/import specification,file_or_text,no,import_services,Required when destination-specific mapping is requested,Prevent guessed mappings
+duplicate_definition,What counts as a duplicate?,textarea,conditional,services,Required when duplicate review/removal requested,Define duplicate logic
+duplicate_action,What should happen to duplicates?,select,conditional,services,"Flag only|Remove under rule|Merge under rule|Retain",Prevent unauthorized deletion
+duplicate_winner_rule,If one duplicate is kept how is it chosen?,textarea,conditional,services,Required for Remove/Merge when competing records differ,Define deterministic rule
+required_fields,Which fields must not be blank?,textarea,no,services,Column names or none,Missing-value validation
+acceptable_blank_fields,Which fields may be blank?,textarea,no,services,Column names or none,Missing-value exceptions
+missing_fill_rule,May missing values be filled automatically?,textarea,no,services,Exact deterministic rule or No,Prevent fabricated values
+date_format,Required date format,text,no,services,Example YYYY-MM-DD,Formatting target
+phone_format,Required phone format,text,no,services,Explicit format or no preference,Formatting target
+numeric_currency_rules,Numeric/currency/decimal rules,textarea,no,services,Explicit format or no preference,Formatting target
+boolean_rules,Boolean value rules,textarea,no,services,Explicit accepted values or no preference,Formatting target
+identifier_rules,Identifier rules including leading zeros,textarea,no,services,Explicit rules or no preference,Protect identifiers
+expected_headers,Expected headers or target column order,textarea,no,services,Header list/order or no preference,Structural validation
+row_deletion_permission,May rows be deleted?,select,yes,services,"No - flag only|Yes under agreed rules",Deletion authorization
+merge_files,Should files be merged?,select,conditional,multi_file,"No|Yes using supplied keys",Multi-file scope
+merge_keys,Merge/matching keys,textarea,conditional,multi_file,Required when files will be merged,Prevent guessed joins
+sensitive_data,Does the dataset contain confidential regulated or sensitive data?,select,yes,all,"No|Yes|Unsure",Handling suitability gate
+data_authorization,Do you have the right to provide this data for processing?,select,yes,all,"Yes|No|Unsure",Authorization gate
+external_enrichment,Is external lookup or enrichment requested?,select,yes,all,"No|Yes",Scope/risk gate
+enrichment_source,Authorized enrichment source and permitted use,textarea,conditional,all,Required if external_enrichment=Yes,Source/licensing check
+deadline,Required deadline,date_or_text,yes,all,Future date or agreed timing,Capacity and promise control
+acceptance_checks,Checks the finished file must pass,textarea,no,all,Explicit checks or none supplied,Definition of done
+ambiguity_decider,Who decides unresolved cases?,select,yes,services,"Customer|Foremanly may flag only",Avoid silent assumptions
+source_file_upload,Source file(s),file_upload,yes,all,Allowed file types and size limits set by final form tool,Primary work input
