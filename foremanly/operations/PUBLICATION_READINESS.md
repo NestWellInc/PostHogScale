@@ -40,6 +40,18 @@ Before clearing any service SKU:
 - [ ] current storefront/homepage presentation is coherent with Foremanly positioning
 
 ## Per-SKU presentation evidence
+### FS-DQA-019 — CSV Data Quality Audit
+The DRAFT audit product now reuses the verified general-cleanup synthetic proof image as an **issue-identification illustration**, not as evidence that cleanup is included in the $19 audit.
+
+Verified live on 2026-08-19:
+- product remains `DRAFT`
+- featured image exists on Shopify CDN
+- alt text explicitly says it is a synthetic CSV cleanup example illustrating issues an audit can identify and is not a client result
+- product description still clearly states diagnostic review only, no silent cleanup or row deletion, and cleanup is purchased separately
+- underlying reusable demo is the verified `foremanly/portfolio/general-cleanup/` lane: 11 input rows → 10 output rows, 7 columns preserved, two rows shared duplicate key `C003`, and one duplicate was removed only under the documented cleanup rule
+
+This is intentional proof reuse rather than a new portfolio lane. It reduces the audit SKU's presentation gap without implying that the audit itself performs the demonstrated cleanup. **It does not clear the visual or publication gate.** Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
+
 ### FS-CLN-049 — CSV & Spreadsheet Cleanup
 A synthetic before/after proof image based on the already-verified `foremanly/portfolio/general-cleanup/` example is attached to the DRAFT Shopify product.
 
