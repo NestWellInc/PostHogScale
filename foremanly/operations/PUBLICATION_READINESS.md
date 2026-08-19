@@ -87,6 +87,21 @@ Verified live after attachment:
 
 This closes the missing proof-asset gap for FS-MULTI-099 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
 
+### FS-IMPORT-001 — Import-Ready CSV Preparation
+A customer-facing process illustration based strictly on the existing bounded product definition is attached to the DRAFT Shopify product as of 2026-08-19. It is a process illustration, not fabricated client proof.
+
+Verified live after attachment:
+- product remains `DRAFT`
+- featured image exists on Shopify CDN
+- alt text identifies it as a synthetic process illustration
+- visual shows the existing workflow: preserve the source CSV, use the buyer-supplied destination schema/template/import specification, map and validate agreed fields/formats, flag ambiguity rather than guess, and deliver the prepared working copy plus quality report, change/exception log, and unresolved-record list
+- visual explicitly states that Foremanly does not invent missing business data and does not guarantee destination-platform acceptance
+- product price, SKU, scope, description, and publication status were not otherwise changed
+
+Detailed durable record: `foremanly/shopify/product-proof/FS-IMPORT-001.md`.
+
+This reduces the presentation gap for FS-IMPORT-001 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
+
 ## Digital-product gates
 Before clearing either digital SKU:
 - [x] distinct source deliverable exists in GitHub
