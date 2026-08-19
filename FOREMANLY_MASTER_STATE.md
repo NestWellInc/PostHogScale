@@ -80,16 +80,52 @@ The $9 checklist is explicitly checklist-only; the $12 toolkit is the fuller pac
 
 ### Archived catalog
 Archived overlapping Foremanly experiments:
-- `gid://shopify/Product/8053966536747` — duplicate audit
-- `gid://shopify/Product/8053966635051` — overlapping cleanup
-- `gid://shopify/Product/8053966798891` — duplicate multi-file offer
-- `gid://shopify/Product/8053967290411` — overlapping QA toolkit
+- `gid://shopify/Product/8053966536747`
+- `gid://shopify/Product/8053966635051`
+- `gid://shopify/Product/8053966798891`
+- `gid://shopify/Product/8053967290411`
 
 Six active contractor spreadsheet products were archived on 2026-08-18 because they conflicted with current data-quality positioning and had no verified external revenue evidence. This was reversible. Do not reactivate without evidence for a separate strategy.
 
-### Collections
-- **Foremanly Data Quality Services** — `gid://shopify/Collection/690943492139`
-- **Foremanly Data Quality Resources** — `gid://shopify/Collection/690943524907`
+### Canonical collections
+- **Foremanly Data Quality Services** — `gid://shopify/Collection/690943492139` — currently linked from main navigation; six service offers
+- **Foremanly Data Quality Resources** — `gid://shopify/Collection/690943524907` — two digital resources
+
+Additional redundant/unlinked collections currently exist from earlier automation (`CSV & Spreadsheet Data Quality Services`, `Data Cleanup Services`, `CSV Quality Control Tools`, contractor collection). Do not spend time deleting backend-only duplicates unless they become customer-facing or create operational errors. Main navigation should use the canonical collections above.
+
+### Main navigation — corrected 2026-08-18
+Main menu is now verified as:
+1. Home
+2. Data Services → `Foremanly Data Quality Services`
+3. How Data Services Work
+4. Contact
+
+The generic `Catalog` link was removed because intentional Foremanly offers remain DRAFT and the old active contractor products were archived. This prevents a likely empty/irrelevant customer path.
+
+Footer remains Search + Shopify privacy choices.
+
+### Published pages — audited 2026-08-18
+- `Contact Foremanly Systems` — published and aligned with current intake/sensitive-data rules
+- `How Foremanly Systems Data Services Work` — published and aligned with current service workflow
+- Shopify `Your Privacy Choices` — published
+- `Foremanly Systems Contractor Tools — What They Are & Which One Fits` — legacy page was found published and was successfully **unpublished** on 2026-08-18
+
+### Live theme/homepage — CRITICAL verified issue
+Current MAIN theme:
+- theme GID: `gid://shopify/OnlineStoreTheme/189308469291`
+- theme name: `projectscale-digital-systems-v1-0-1`
+
+A direct MAIN-theme file audit found `templates/index.json` still contains contractor-era homepage positioning and unsupported instant-download claims, including a contractor-focused hero/catalog and spreadsheet-tool FAQs. This is the highest-impact remaining storefront consistency defect.
+
+The connected Shopify mutation tool **blocks writes to live/MAIN theme files**, so it cannot be corrected directly from this chat.
+
+Implementation-ready replacement is committed at:
+- `foremanly/shopify/theme/templates/index.json`
+- `foremanly/shopify/theme/README.md`
+
+The replacement uses the live theme's existing section types; removes contractor positioning, catalog CTA, and unverified instant-download claims; centers data quality/source preservation/documented changes; and links to the existing How It Works + Contact pages.
+
+Do not drive serious external traffic until this homepage is patched or otherwise replaced with current Foremanly positioning.
 
 ### Pricing ladder
 - $9–$12 digital self-service entry
@@ -105,12 +141,11 @@ Six active contractor spreadsheet products were archived on 2026-08-18 because t
 Do not silently expand starter scope to absorb larger files, more files, heavy ambiguity resolution, destination mapping, or sensitive-data requirements.
 
 ### Storefront evidence
-A 2026-08-18 live audit found 96 online-store sessions in the prior 30 days with zero cart additions, zero checkout starts, and zero completed checkouts. Much of this may be setup/internal traffic, so do not treat 0% conversion as proof the offers failed. Fix catalog coherence, trust, intake/fulfillment readiness, visuals, and path-to-purchase before scaling acquisition.
+A 2026-08-18 live audit found 96 online-store sessions in the prior 30 days with zero cart additions, zero checkout starts, and zero completed checkouts. Much of this may be setup/internal traffic, so do not treat 0% conversion as proof the offers failed. Owner-associated paid/fulfilled orders must not be counted as external Foremanly revenue unless separately verified.
 
-Owner-associated paid/fulfilled Shopify orders must not be counted as external Foremanly revenue unless separately verified.
-
-## Digital asset status
-Core template source assets exist under `foremanly/template-pack/`:
+## Digital products / fulfillment assets
+### $12 CSV Quality Control Template Pack
+Source/customer-facing files exist under `foremanly/template-pack/`:
 - `README.md`
 - `data_quality_audit_checklist.csv`
 - `quality_report_template.md`
@@ -119,62 +154,69 @@ Core template source assets exist under `foremanly/template-pack/`:
 - `validation_checklist.csv`
 - `intake_scope_questionnaire.md`
 
-Before selling digital products:
-- package customer-facing downloads
-- configure digital fulfillment
+### $9 Spreadsheet Data Quality Checklist
+Customer-facing product now exists under `foremanly/checklist-product/`:
+- `spreadsheet_data_quality_checklist.csv`
+- `README.md`
+
+This closes the prior gap where the $9 Shopify product had positioning but no distinct deliverable.
+
+### Automated packaging
+GitHub Actions workflow committed:
+`.github/workflows/foremanly-package-digital-products.yml`
+
+Purpose:
+- build `Foremanly-Spreadsheet-Data-Quality-Checklist.zip`
+- build `Foremanly-CSV-Quality-Control-Template-Pack.zip`
+- generate SHA-256 checksums
+- upload the package files as GitHub Actions artifacts on relevant source changes / manual dispatch
+
+The workflow uses current GitHub-hosted action major versions verified on 2026-08-18. The connected GitHub app does not expose listing/dispatching ordinary push-triggered workflow runs, so the first successful packaging run has **not yet been independently verified** in this chat. Do not claim the ZIP artifacts exist until a run/artifact is verified.
+
+Remaining sellability requirements:
+- verify successful package workflow/artifacts or produce equivalent clean ZIPs another way
+- configure Shopify digital fulfillment
 - remove physical shipping where appropriate
-- finalize buyer instructions/usage copy
-- test purchase/download flow
+- test purchase/download delivery
 - add synthetic/authorized visuals
+
+## Service intake system
+Implementation-ready intake specification exists under `foremanly/intake/`:
+- `service_intake_fields.csv`
+- `SERVICE_INTAKE_SPEC.md`
+
+It defines form-ready fields and conditional triage for order matching, file scope, output format, duplicate rules/actions, required/acceptable blanks, destination specifications, row-deletion authorization, merge keys, sensitive-data gating, data authorization, external enrichment, deadline, acceptance checks, ambiguity handling, and file upload.
+
+It also defines routing/rescope rules for $19/$49/$59/$79/$99 services, hard-stop conditions, project-record fields, and completion gates. Future Shopify/form implementations should reproduce this logic rather than using only a generic upload box.
 
 ## Synthetic portfolio — verified 2026-08-18
 ### General cleanup example
 Folder: `foremanly/portfolio/general-cleanup/`
-- `sample_dirty.csv`
-- `sample_clean.csv`
-- `sample_quality_report.md`
-- `sample_change_log.csv`
-- `README.md`
-
-Verified:
-- 11 input rows -> 10 output rows
-- 7 columns before/after
-- duplicate `C003` documented and one row removed under explicit completeness rule
-- 3 relevant blank contact cells before cleanup; 2 remain because no source values existed
-- programmatic correction-count cross-check: 3 name, 3 email, 9 phone, 5 date, 8 status, 8 amount-format changes
+Verified: 11 input rows → 10 output rows; 7 columns; one documented `C003` duplicate removal; blank-value exceptions retained; correction counts cross-checked.
 
 ### Shopify product CSV preflight example
 Folder: `foremanly/portfolio/shopify-product-csv/`
-- `sample_dirty_shopify_products.csv`
-- `sample_clean_shopify_products.csv`
-- `sample_quality_report.md`
-- `sample_change_log.csv`
-- `README.md`
-
-The example was built after checking current official Shopify product-CSV guidance on 2026-08-18. It deliberately distinguishes platform-format rules from merchant-specific business rules.
-
-Verified:
-- 4 input rows -> 4 output rows
-- 14 columns before/after
-- 3 URL-handle corrections
-- 2 publication corrections/normalizations
-- 2 status normalizations
-- 1 row / 2 cells repaired for the default-option dependency
-- 4 price-format corrections
-- 1 charge-tax normalization
-- 3 requires-shipping corrections/normalizations
-- no titles, SKUs, descriptions, vendors, types, or tags invented/replaced
+Built after checking then-current official Shopify product CSV guidance. Verified: 4 input rows → 4 output rows; 14 columns; handle/publication/status/default-option/price/tax/shipping corrections documented; no unrelated business content invented.
 
 Portfolio samples may be reused for storefront screenshots, marketplaces, proposals, and educational content only when clearly labeled synthetic/demo. Never present them as client results, testimonials, or proof of guaranteed imports.
 
-Next portfolio lanes should be created only when they support active offers and add distinct proof: CRM contact CSV, destination-spec/import-ready CSV, and multi-file normalization.
+Create additional CRM/import-ready/multi-file portfolio examples only when each adds distinct buyer proof; do not manufacture an endless sample library.
+
+## Marketplace launch assets
+Prepared and committed:
+- `foremanly/marketplaces/FIVERR_CSV_CLEANUP_GIG.md`
+- `foremanly/marketplaces/UPWORK_PROJECT_CATALOG_CSV_CLEANUP.md`
+
+Both use the same bounded $19 audit / $49 cleanup / $99 multi-file core ladder, buyer requirements, preserved-source rule, ambiguity handling, synthetic gallery plan, and non-guarantee language.
+
+Do not create many near-duplicate gigs/projects. Launch one focused core cleanup listing per marketplace first, observe response, then add verticalized offers only when evidence supports it.
 
 ## Channel strategy — verified 2026-08-18
-- **Shopify:** primary owned storefront.
+- **Shopify:** primary owned storefront; fix live homepage and fulfillment before serious acquisition.
 - **TikTok:** organic education/attention; do not assume TikTok Shop can sell ordinary services or Foremanly digital goods without applicable current eligibility.
 - **Etsy:** digital-download lane only; spend approval required before fee-incurring setup/listings.
 - **Gumroad / Payhip / Ko-fi:** secondary rails when current terms/account eligibility fit; do not incur new paid plans/fees without approval.
-- **Fiverr / Upwork Project Catalog:** prepare predefined versions of the $19/$49/$59/$79/$99 ladder when owner-authenticated publication is available.
+- **Fiverr / Upwork Project Catalog:** one focused core-cleanup listing prepared for each; owner-authenticated publication remains external gate.
 
 ## Metrics
 Track qualified leads, quotes, jobs won, gross cash, fees, verified net cash, average order value, delivery time, revisions, repeat customers, source channel, Shopify funnel metrics, rows processed, duplicates found, missing-value issues, formatting defects, structural repairs, exceptions, and validation failures.
@@ -182,12 +224,15 @@ Track qualified leads, quotes, jobs won, gross cash, fees, verified net cash, av
 ## Pending Human / External Actions
 Surface this section when the owner says `Report`.
 
-1. **Shopify digital fulfillment setup — HIGH impact.** Current connector does not expose attaching the downloadable bundle or configuring/testing download delivery. Requires Shopify admin/browser or compatible fulfillment app/tool before $9/$12 activation.
-2. **Shopify service fulfillment / intake configuration — HIGH impact.** Current descriptions use the Foremanly email for intake; better flow should configure non-shipping behavior and, if practical, secure file upload/intake. Requires admin/browser/app capability if not exposed by current tools.
-3. **Final storefront/theme/navigation QA — MEDIUM/HIGH impact.** Review actual homepage/navigation after fulfillment/visual work to ensure archived contractor products are not referenced in menus, sections, banners, or theme copy.
-4. **Publication gate — HIGH impact once ready.** Activate only offers whose checkout, intake, fulfillment, and post-purchase flow have been tested. Any new legal/KYC/payout/tax/app-charge/paid-plan step requires owner action/approval.
+1. **Patch live Shopify homepage — CRITICAL / highest impact.** MAIN theme still contains contractor-era positioning and unsupported instant-download claims. Connected API cannot write MAIN theme files. Exact corrected `templates/index.json` + safe implementation sequence are in `foremanly/shopify/theme/`. Requires authenticated Shopify theme editor/browser or another tool that can safely edit the live theme. Re-check current live file before replacing because automations may change state concurrently.
+2. **Shopify digital fulfillment setup — HIGH impact.** Attach/configure the $9/$12 downloadable packages and test delivery. Current connector does not expose digital-download attachment/configuration. Do not activate these products until delivery is verified.
+3. **Shopify service fulfillment / secure intake — HIGH impact.** Implement the prepared `foremanly/intake/` schema in Shopify or a suitable form/upload app, configure non-shipping behavior, and test order-to-project intake. Current email intake can serve as a temporary fallback but secure handling suitability must be confirmed for sensitive data.
+4. **Fiverr publication — HIGH impact after storefront credibility fix.** Use `foremanly/marketplaces/FIVERR_CSV_CLEANUP_GIG.md`; owner/browser needed for seller profile/category, any identity/tax/phone verification, gallery upload, live category fields, and final publish.
+5. **Upwork Project Catalog publication — HIGH impact after storefront credibility fix.** Use `foremanly/marketplaces/UPWORK_PROJECT_CATALOG_CSV_CLEANUP.md`; owner/browser needed for profile/category/gallery, account verification, live tier fields, and submission/review.
+6. **Verify GitHub packaging workflow artifacts — MEDIUM.** Workflow is committed but current connector cannot independently enumerate ordinary push-triggered runs. Verify workflow success/artifacts through GitHub Actions UI or a compatible workflow-run tool before treating generated ZIPs as fulfillment-ready.
+7. **Publication gate — HIGH impact once ready.** Activate only offers whose scope, checkout, intake, fulfillment, and post-purchase flow have been tested. Any new legal/KYC/payout/tax/app-charge/paid-plan step requires owner action/approval.
 
-Do not interrupt the owner for these during routine work; advance other legitimate work and surface them in `Report`.
+Do not interrupt the owner for these during routine work; advance other legitimate work and surface them when the owner says `Report`.
 
 ## Automation
 `Foremanly Growth Engine` is enabled **hourly**, the maximum supported frequency.
@@ -206,31 +251,31 @@ Hard approval gates: purchases, ads, subscriptions, inventory, listing/setup fee
 
 ## Current implementation state — 2026-08-18
 - Correct Foremanly Shopify store verified live.
-- Eight intentional Foremanly draft products exist.
-- Four overlapping Foremanly experiments archived.
-- Six legacy contractor products archived to remove brand confusion.
-- Intentional drafts organized into two Foremanly collections.
-- Core digital template source assets exist in GitHub.
-- Two full synthetic portfolio packages are complete and cross-checked: general cleanup and Shopify product CSV preflight.
-- Import-ready and checklist copy corrected for consistency/differentiation.
+- Eight intentional Foremanly draft products exist; overlapping experiments and contractor products are archived.
+- Canonical service/resource collections exist.
+- Main menu corrected; legacy contractor page unpublished; current Contact/How It Works pages verified.
+- Live homepage contractor-era theme defect verified; corrected replacement prepared in GitHub but live write is externally blocked.
+- $9 checklist and $12 toolkit have distinct customer-facing source assets.
+- Automated ZIP packaging workflow committed; execution/artifact verification pending.
+- Service intake/form specification completed.
+- Two cross-checked synthetic portfolio packages completed.
+- Fiverr and Upwork core-cleanup listing frameworks completed.
 - Hourly Growth Engine active with no-busywork and Report protocol.
-- No verified external Foremanly revenue or conversion recorded.
+- No verified external Foremanly revenue recorded.
 
 ## Immediate priorities
-1. Prepare customer-facing packaging/readme for the digital checklist/template pack.
-2. Build standardized service intake/file-upload specification using the existing questionnaire.
-3. Create the CRM synthetic portfolio example only if it adds distinct proof beyond the general-cleanup sample.
-4. Create destination-spec and multi-file examples only when each adds distinct buyer proof.
-5. Configure digital/service fulfillment and non-shipping behavior when required capability becomes available.
-6. Add synthetic/authorized visuals to the eight drafts.
-7. QA all product pages for scope clarity, trust, buyer instructions, differentiation, and unsupported claims.
-8. Test checkout, intake, fulfillment, and post-purchase instructions while drafts remain unpublished.
-9. Prepare mirrored Fiverr/Upwork services and secondary digital listings where no paid gate is triggered.
-10. Build organic content from the synthetic portfolio rather than producing unrelated content inventory.
-11. Track leads, cash, fees, delivery time, revisions, source channel, and storefront funnel metrics.
-12. Do not create more overlapping Shopify SKUs until the eight current offers have clear fulfillment and positioning.
+1. **Do not scale traffic until the live Shopify homepage is corrected.**
+2. Verify/package the $9/$12 digital downloads and configure/test fulfillment.
+3. Implement/test service intake and non-shipping behavior using the prepared schema.
+4. Add synthetic/authorized product/gallery visuals that reuse existing portfolio evidence rather than generic stock art.
+5. Test checkout, intake, fulfillment, and post-purchase instructions while products remain unpublished.
+6. Publish one focused Fiverr core-cleanup Gig and one focused Upwork Project Catalog offer when authenticated gates are available.
+7. Once the Shopify home/fulfillment path is credible, activate the smallest set of strongest offers first rather than all eight automatically.
+8. Begin organic distribution/content using existing synthetic portfolio proof; do not create unrelated content inventory.
+9. Track qualified leads, cash, fees, delivery time, revisions, source channel, and storefront funnel metrics.
+10. Add new products/services only when evidence reveals a real demand or operational gap.
 
 ## Cross-chat rule
 Normal ChatGPT: research, decide, refine, update state, and make safe connected-app changes.
 
-Work / desktop: read `FACTORY_MASTER_STATE.md`, then this file, then `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md`; handle browser-only authenticated actions, uploads, publication, KYC, and supervised platform steps; write verified results back to canonical state.
+Work / desktop: read `FACTORY_MASTER_STATE.md`, then this file, then `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md`; handle browser-only authenticated actions, uploads, live theme editing, publication, KYC, and supervised platform steps; write verified results back to canonical state.
