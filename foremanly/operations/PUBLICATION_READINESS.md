@@ -36,6 +36,18 @@ Before clearing any service SKU:
 - [ ] customer-facing visual/product presentation QA complete
 - [ ] current storefront/homepage presentation is coherent with Foremanly positioning
 
+## Per-SKU presentation evidence
+### FS-CLN-049 — CSV & Spreadsheet Cleanup
+A synthetic before/after proof image based on the already-verified `foremanly/portfolio/general-cleanup/` example was attached to the DRAFT Shopify product on 2026-08-18 CDT / 2026-08-19 UTC.
+
+Verified live after attachment:
+- product remains `DRAFT`
+- featured image exists on Shopify CDN
+- image alt text identifies it as a synthetic before-and-after CSV cleanup example
+- underlying demonstration remains 11 input rows → 10 output rows, 7 columns preserved, one explicit duplicate removal, formatting normalization, and unknown values left unguessed
+
+This reduces the presentation gap for FS-CLN-049 but **does not clear the visual gate**. Customer-facing rendered product-page QA is still required, and the other service SKUs still need appropriate non-duplicative visuals or deliberate evidence that a shared visual is sufficient.
+
 ## Digital-product gates
 Before clearing either digital SKU:
 - [x] distinct source deliverable exists in GitHub
