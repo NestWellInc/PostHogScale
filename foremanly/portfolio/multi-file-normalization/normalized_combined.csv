@@ -1,0 +1,9 @@
+source_file,source_record_id,customer_name,email,state,signup_date,amount
+source_a.csv,A001,North Ridge LLC,ops@northridge.com,TX,2026-08-01,1250.00
+source_a.csv,A002,Blue Mesa Co,hello@bluemesa.co,CA,2026-08-02,875.00
+source_a.csv,A003,Harbor Works,,NY,2026-08-03,420.50
+source_a.csv,A004,Juniper Studio,team@juniper.example,CO,2026-08-04,1100.00
+source_b.csv,B001,Stone Field Inc,contact@stonefield.example,TX,2026-08-05,640.00
+source_b.csv,B002,Blue Mesa Co,hello@bluemesa.co,CA,2026-08-02,875.00
+source_b.csv,B003,Maple Route,ops@mapleroute.example,NY,2026-08-06,315.00
+source_b.csv,B004,Cedar Point Group,,CO,2026-08-07,2050.25
