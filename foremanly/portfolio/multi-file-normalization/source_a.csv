@@ -1,0 +1,5 @@
+record_id,customer_name,email,state,signup_date,amount
+A001,North Ridge LLC,OPS@NORTHRIDGE.COM ,Texas,08/01/2026,"$1,250.00"
+A002,Blue Mesa Co,hello@bluemesa.co,ca,2026-08-02,875
+A003,Harbor Works,,NY,8/3/26,420.50
+A004,Juniper Studio,team@juniper.example,Colorado,2026/08/04,"1,100.00"
