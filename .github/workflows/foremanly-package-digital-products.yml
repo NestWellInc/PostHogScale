@@ -1,0 +1,75 @@
+name: Package Foremanly digital products
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'foremanly/checklist-product/**'
+      - 'foremanly/template-pack/**'
+      - '.github/workflows/foremanly-package-digital-products.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Build customer ZIP files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist
+          mkdir -p dist/checklist dist/toolkit
+
+          cp foremanly/checklist-product/README.md dist/checklist/README.md
+          cp foremanly/checklist-product/spreadsheet_data_quality_checklist.csv dist/checklist/spreadsheet_data_quality_checklist.csv
+
+          cp foremanly/template-pack/README.md dist/toolkit/README.md
+          cp foremanly/template-pack/data_quality_audit_checklist.csv dist/toolkit/data_quality_audit_checklist.csv
+          cp foremanly/template-pack/quality_report_template.md dist/toolkit/quality_report_template.md
+          cp foremanly/template-pack/change_exception_log.csv dist/toolkit/change_exception_log.csv
+          cp foremanly/template-pack/duplicate_rule_worksheet.csv dist/toolkit/duplicate_rule_worksheet.csv
+          cp foremanly/template-pack/validation_checklist.csv dist/toolkit/validation_checklist.csv
+          cp foremanly/template-pack/intake_scope_questionnaire.md dist/toolkit/intake_scope_questionnaire.md
+
+          (
+            cd dist/checklist
+            zip -X -r ../Foremanly-Spreadsheet-Data-Quality-Checklist.zip .
+          )
+          (
+            cd dist/toolkit
+            zip -X -r ../Foremanly-CSV-Quality-Control-Template-Pack.zip .
+          )
+
+          sha256sum \
+            dist/Foremanly-Spreadsheet-Data-Quality-Checklist.zip \
+            dist/Foremanly-CSV-Quality-Control-Template-Pack.zip \
+            > dist/SHA256SUMS.txt
+
+      - name: Upload checklist ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/Foremanly-Spreadsheet-Data-Quality-Checklist.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload template pack ZIP
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/Foremanly-CSV-Quality-Control-Template-Pack.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload checksums
+        uses: actions/upload-artifact@v7
+        with:
+          path: dist/SHA256SUMS.txt
+          archive: false
+          if-no-files-found: error
+          retention-days: 30
