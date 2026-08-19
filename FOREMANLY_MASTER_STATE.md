@@ -5,6 +5,15 @@
 **Parent Factory:** `FACTORY_MASTER_STATE.md`  
 **Detailed channel research:** `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md`
 
+## Operating doctrine
+**Goal:** build Foremanly Systems into a successful, profitable business by the end of 2026.
+
+**ALWAYS PROGRESS:** every run must complete at least one concrete revenue-relevant or operationally durable action when one is available. Never create cosmetic churn, duplicate research, filler assets, or pretend progress. If no meaningful action can be completed, record the exact blocker or missing capability and stop.
+
+**Quality loop:** after meaningful changes, check for mistakes, duplicated positioning, mixed legacy branding, pricing conflicts, fulfillment gaps, unsupported claims, broken assumptions, and conversion friction. Fix what can be fixed safely, then move to the next highest-value action.
+
+**Report protocol:** maintain a persistent human/external-action queue below. When the owner personally messages `Report`, return a concise status report with verified progress, current commercial state, revenue/traction, blockers, and every pending human/external action ranked by impact.
+
 ## Company
 Foremanly Systems is a CSV and spreadsheet data-quality company.
 
@@ -65,17 +74,22 @@ Keep drafts unpublished until fulfillment, intake, visuals, non-shipping/digital
 7. **Import-Ready CSV Preparation — $79** — `gid://shopify/Product/8053966995499` — `FS-IMPORT-001`
 8. **Spreadsheet Data Quality Checklist — $9** — `gid://shopify/Product/8053967093803` — `FS-DIGITAL-CHECK-001`
 
-### Archived duplicate experiments
+The $79 import-prep offer was hardened on 2026-08-18 with explicit source preservation, destination-spec intake, deliverables, missing-data rules, import caveats, and separate-scope boundaries.
+
+The $9 checklist was explicitly differentiated from the $12 toolkit on 2026-08-18. The $9 product is checklist-only; the $12 toolkit is the fuller package with report/change-log/duplicate-rule/intake assets. Do not create more overlapping low-ticket products without evidence.
+
+### Archived experiments / legacy catalog
+Archived overlapping Foremanly experiments:
 - `gid://shopify/Product/8053966536747` — duplicate audit
 - `gid://shopify/Product/8053966635051` — overlapping cleanup
 - `gid://shopify/Product/8053966798891` — duplicate multi-file offer
 - `gid://shopify/Product/8053967290411` — overlapping QA toolkit
 
-Do not reactivate without evidence.
+On 2026-08-18 the six active contractor spreadsheet products were also archived because they conflicted with Foremanly's current data-quality positioning and had no verified external revenue evidence. This was a reversible catalog-coherence change; do not reactivate them unless evidence supports a separate contractor-product strategy.
 
 ### Collections
-- **Foremanly Data Quality Services** — `gid://shopify/Collection/690943492139` — contains the six service drafts: $19 audit, $49 cleanup, $59 Shopify CSV, $59 CRM CSV, $99 multi-file, and $79 import-ready preparation.
-- **Foremanly Data Quality Resources** — `gid://shopify/Collection/690943524907` — contains the $12 template pack and $9 checklist.
+- **Foremanly Data Quality Services** — `gid://shopify/Collection/690943492139` — service drafts
+- **Foremanly Data Quality Resources** — `gid://shopify/Collection/690943524907` — digital resource drafts
 
 ### Pricing ladder
 - $9–$12 digital self-service entry
@@ -91,7 +105,7 @@ Do not reactivate without evidence.
 Do not silently expand starter scope to absorb larger files, more files, heavy ambiguity resolution, destination mapping, or sensitive-data requirements.
 
 ### Storefront evidence
-A 2026-08-18 live audit found 96 online-store sessions in the prior 30 days with zero cart additions, zero checkout starts, and zero completed checkouts. Treat catalog coherence, trust, intake/fulfillment readiness, visuals, and path-to-purchase as the immediate bottleneck before scaling traffic.
+A 2026-08-18 live audit found 96 online-store sessions in the prior 30 days with zero cart additions, zero checkout starts, and zero completed checkouts. Much of the traffic may be setup/internal traffic, so do not treat 0% conversion as proof the Foremanly offers failed. The actionable conclusion is that catalog coherence, trust, intake/fulfillment readiness, visuals, and path-to-purchase must be fixed before scaling acquisition.
 
 Prior paid/fulfilled Shopify orders associated with the owner must not be counted as external Foremanly revenue unless separately verified.
 
@@ -109,18 +123,35 @@ Before selling digital products:
 - package customer-facing downloads
 - configure digital fulfillment
 - remove physical shipping where appropriate
-- finalize buyer instructions/licensing copy
+- finalize buyer instructions/usage copy
 - test purchase/download flow
 - add synthetic/authorized visuals
 
-Do not add more overlapping low-ticket SKUs until these are sellable.
+## Synthetic portfolio — verified 2026-08-18
+First complete synthetic before/after portfolio example exists under `foremanly/portfolio/general-cleanup/`:
+- `sample_dirty.csv`
+- `sample_clean.csv`
+- `sample_quality_report.md`
+- `sample_change_log.csv`
+- `README.md`
+
+Verified demo facts:
+- 11 input rows -> 10 output rows
+- 7 columns before and after
+- duplicate key `C003` appeared twice; one row removed under documented completeness rule
+- 3 relevant blank contact cells before cleanup; 2 remain because no source values existed
+- correction counts were programmatically cross-checked: 3 name, 3 email, 9 phone, 5 date, 8 status, and 8 amount-format changes
+
+This example is approved for storefront screenshots, marketplace portfolio material, proposals, educational content, and process explanation only when clearly labeled synthetic/demo data. Never present it as a client result or testimonial.
+
+Next portfolio lanes should be created only when they support an actual offer: Shopify product CSV, CRM contact CSV, import-ready/destination-spec CSV, and multi-file normalization.
 
 ## Channel strategy — verified 2026-08-18
 ### Shopify
 Primary owned storefront for services and digital products.
 
 ### TikTok / TikTok Shop
-Use TikTok primarily for organic education/attention. Current U.S. TikTok Shop rules do not permit ordinary service listings. Virtual/digital goods require applicable Virtual Goods approval and current eligibility is invite-only. Do not list Foremanly services in TikTok Shop or assume ordinary seller access can sell Foremanly downloads. Reconsider only if the account receives applicable approval and the exact product meets current rules.
+Use TikTok primarily for organic education/attention. Current U.S. TikTok Shop rules do not permit ordinary service listings. Virtual/digital goods require applicable approval and current eligibility is invite-only. Do not list Foremanly services in TikTok Shop or assume ordinary seller access can sell Foremanly downloads. Reconsider only if the account receives applicable approval and the exact product meets current rules.
 
 Organic themes: synthetic before/after CSV examples, duplicates, missing values, formatting, malformed rows, Shopify CSV preflight, quality-report education, and preserve-the-original/audit-trail positioning. Never expose client data.
 
@@ -128,24 +159,23 @@ Organic themes: synthetic before/after CSV examples, duplicates, missing values,
 Use only for Foremanly-designed digital downloads/templates where current rules fit. General Foremanly cleanup services are not the Etsy lane. Spend approval is required before fee-incurring setup/listings.
 
 ### Gumroad / Payhip / Ko-fi
-Use as secondary digital/service rails when current terms and account eligibility fit. Payhip is especially suitable for digital products and related product types; Gumroad supports digital and service-type products subject to current restrictions; Ko-fi is a candidate for digital products and bounded service requests. Do not incur new paid plans or fees without approval.
+Use as secondary digital/service rails when current terms and account eligibility fit. Do not incur new paid plans or fees without approval.
 
 ### Fiverr / Upwork Project Catalog
 Prepare predefined service versions of the $19 / $49 / $59 / $79 / $99 ladder when owner-authenticated publication is available. Respect current AI, privacy, profile, communication, and payment rules.
 
-## Product backlog
-Stay adjacent to real data-quality jobs:
-1. CSV Health Check Mini Kit — free/$0–$5 lead magnet
-2. Shopify Product CSV Preflight Template Pack — $12–$19
-3. CRM Import Preflight Template Pack — $12–$19
-4. Inventory CSV Cleanup Pack — $12–$19
-5. Multi-File Merge Readiness Kit — $19–$29
-6. buyer-specific reusable cleanup workflow/script — $95+
-
-Do not expand the catalog until current drafts have clear fulfillment and positioning.
-
 ## Metrics
 Track qualified leads, quotes, jobs won, gross cash, fees, verified net cash, average order value, delivery time, revisions, repeat customers, source channel, Shopify funnel metrics, rows processed, duplicates found, missing-value issues, formatting defects, structural repairs, exceptions, and validation failures.
+
+## Pending Human / External Actions
+Only add items here when a meaningful business step genuinely requires the owner, browser-authenticated interaction, unsupported capability, or approval. Surface this section when the owner says `Report`.
+
+1. **Shopify digital fulfillment setup — HIGH impact.** The current connector can manage products/catalog but does not expose an action to attach the downloadable bundle to the digital products or configure/test the customer download-delivery app flow. Requires Shopify admin/browser or another compatible fulfillment app/tool. Needed before the $9/$12 digital products can be activated.
+2. **Shopify service fulfillment / intake configuration — HIGH impact.** Current product descriptions use the Foremanly email address for intake, but a better buyer flow should configure non-shipping behavior and, if practical, a secure file-upload/intake path in Shopify or a connected form/app. Requires admin/browser/app capability if not exposed through current tools.
+3. **Final storefront/theme/navigation QA — MEDIUM/HIGH impact.** After the drafts have fulfillment and visuals, the actual storefront homepage/navigation must be reviewed to ensure archived contractor products are not still referenced in menus, sections, banners, or theme copy. Use authenticated browser/theme editing capability when available.
+4. **Publication gate — HIGH impact once ready.** Activate only the offers whose checkout, intake, fulfillment, and post-purchase flow have been tested. If Shopify presents new legal, KYC, payout, tax, app-charge, or paid-plan steps, owner action/approval is required.
+
+Do not interrupt the owner for these during routine work; keep advancing other legitimate work and surface them in `Report`.
 
 ## Automation
 `Foremanly Growth Engine` is enabled **hourly**, the maximum supported frequency.
@@ -153,9 +183,12 @@ Track qualified leads, quotes, jobs won, gross cash, fees, verified net cash, av
 Every run should:
 - read `FACTORY_MASTER_STATE.md` and this file when GitHub is available
 - verify the Shopify connection is Foremanly Systems before mutations
-- prioritize revenue, catalog quality, checkout/intake/fulfillment readiness, durable assets, pricing, portfolio examples, legitimate distribution, and safe reversible connected-app work
+- ALWAYS PROGRESS with a concrete revenue or durable operations action if available
+- run the quality loop after meaningful implementation
 - update canonical state after material verified changes
+- add genuine owner/browser/tool blockers to `Pending Human / External Actions`
 - use fresh platform research when rules may have changed
+- stop rather than fabricate progress when nothing useful can be done
 
 `Foremanly Research — Retired` remains disabled because it targeted the obsolete contractor-tools model.
 
@@ -164,27 +197,30 @@ Hard approval gates: purchases, ads, subscriptions, inventory, listing/setup fee
 ## Current implementation state — 2026-08-18
 - Correct Foremanly Shopify store verified live.
 - Eight intentional Foremanly draft products exist.
-- Four overlapping experiments are archived.
-- All eight drafts are organized into the two Foremanly collections.
+- Four overlapping Foremanly experiments are archived.
+- Six active legacy contractor products were archived to remove brand confusion.
+- All intentional drafts are organized into the two Foremanly collections.
 - Core digital template source assets exist in GitHub.
+- First fully synthetic before/after cleanup portfolio example is complete and cross-checked.
+- Import-ready and checklist product copy has been corrected for consistency/differentiation.
 - TikTok is separated into organic acquisition vs. Shop eligibility.
 - Etsy is a digital-download lane only and remains spend-gated.
-- Gumroad, Payhip, Ko-fi, Fiverr, and Upwork remain secondary candidates subject to current rules/account checks.
-- Hourly Growth Engine is active at the maximum supported frequency.
+- Hourly Growth Engine is active at the maximum supported frequency with the no-busywork/report protocol.
 - No verified external Foremanly revenue or conversion has been recorded.
 
 ## Immediate priorities
-1. Package template/checklist assets into customer-facing downloads.
-2. Configure digital/service fulfillment and non-shipping behavior in Shopify.
-3. Build standardized service intake/file-upload flow.
-4. Create synthetic before/after portfolio examples for each service lane.
-5. Add synthetic/authorized visuals to the eight drafts.
-6. QA every product page for scope clarity, trust, buyer instructions, and unsupported claims.
-7. Test Shopify checkout, intake, fulfillment, and post-purchase instructions while drafts remain unpublished.
-8. Prepare mirrored Fiverr/Upwork services and Payhip/Ko-fi/Gumroad digital listings where no paid gate is triggered.
-9. Build a TikTok organic content queue; do not depend on TikTok Shop.
-10. Track leads, cash, fees, delivery time, revisions, source channel, and storefront funnel metrics.
-11. Do not create more overlapping Shopify SKUs until these eight have clear fulfillment and positioning.
+1. Create the next synthetic portfolio example for the Shopify-product-CSV service, using only synthetic data.
+2. Create CRM/import-ready/multi-file synthetic examples only after the Shopify CSV example is QA-complete.
+3. Prepare customer-facing packaging/readme for the digital checklist/template pack.
+4. Configure digital/service fulfillment and non-shipping behavior when the required admin/app capability is available.
+5. Build a standardized service intake/file-upload flow.
+6. Add synthetic/authorized visuals to the eight drafts.
+7. QA every product page for scope clarity, trust, buyer instructions, differentiation, and unsupported claims.
+8. Test Shopify checkout, intake, fulfillment, and post-purchase instructions while drafts remain unpublished.
+9. Prepare mirrored Fiverr/Upwork services and Payhip/Ko-fi/Gumroad digital listings where no paid gate is triggered.
+10. Build organic content from the synthetic portfolio examples; do not depend on TikTok Shop.
+11. Track leads, cash, fees, delivery time, revisions, source channel, and storefront funnel metrics.
+12. Do not create more overlapping Shopify SKUs until these eight have clear fulfillment and positioning.
 
 ## Cross-chat rule
 Normal ChatGPT: research, decide, refine, update state, and make safe connected-app changes.
