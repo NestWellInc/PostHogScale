@@ -1,0 +1,51 @@
+<section class="section">
+  <div class="page-width hero-grid">
+    <div class="hero-copy surface">
+      {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h1>{{ section.settings.heading | escape }}</h1>
+      <p class="lede">{{ section.settings.body | escape }}</p>
+      <div class="button-row">
+        {%- if section.settings.primary_label != blank and section.settings.primary_link != blank -%}
+          <a class="button button--accent" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label | escape }}</a>
+        {%- endif -%}
+        {%- if section.settings.secondary_label != blank and section.settings.secondary_link != blank -%}
+          <a class="button button--secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="hero-media surface">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1800 | image_tag: widths: '480, 750, 1100, 1500, 1800', sizes: '(min-width: 750px) 50vw, 100vw', alt: section.settings.image_alt, loading: 'eager', fetchpriority: 'high' }}
+      {%- else -%}
+        <div class="digital-command" aria-label="Foremanly Systems data-quality workflow preview">
+          <div class="digital-command__bar"><span></span><span></span><span></span></div>
+          <div class="digital-command__grid">
+            <div class="digital-command__card"><strong>Audit</strong><em>Duplicates and gaps</em></div>
+            <div class="digital-command__card"><strong>Clean</strong><em>Explainable corrections</em></div>
+            <div class="digital-command__card"><strong>Validate</strong><em>Counts and rules</em></div>
+            <div class="digital-command__pulse" aria-hidden="true"></div>
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Evidence-led hero",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Foremanly Systems — CSV & Spreadsheet Data Quality" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Clean data. Documented changes. Original preserved." },
+    { "type": "textarea", "id": "body", "label": "Body", "default": "Find duplicates, missing values, formatting inconsistencies, and structural problems while preserving the original source file." },
+    { "type": "image_picker", "id": "image", "label": "Original hero media" },
+    { "type": "text", "id": "image_alt", "label": "Image alt text" },
+    { "type": "text", "id": "primary_label", "label": "Primary button", "default": "How data services work" },
+    { "type": "url", "id": "primary_link", "label": "Primary link" },
+    { "type": "text", "id": "secondary_label", "label": "Secondary button", "default": "Contact Foremanly" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary link" }
+  ],
+  "presets": [{ "name": "Evidence-led hero" }]
+}
+{% endschema %}
