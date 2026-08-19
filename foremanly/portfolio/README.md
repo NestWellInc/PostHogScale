@@ -42,8 +42,21 @@ Demonstrates:
 
 Verified summary: 12 input rows → 11 output rows; 8 columns preserved; one documented duplicate removal.
 
+### 4. Multi-File Cleanup & Normalization
+Path: `foremanly/portfolio/multi-file-normalization/`
+
+Demonstrates:
+- explicit schema mapping across two differently named CSV schemas
+- source provenance retained in the combined output
+- deterministic email/state/date/currency normalization
+- cross-file duplicate-candidate detection without unauthorized deletion or merge
+- missing values retained rather than fabricated
+- source preservation and documented caveats
+
+Verified summary: 2 source files; 8 total input rows → 8 output rows; 0 silently deleted rows; one cross-file duplicate candidate retained pending an explicit resolution rule.
+
 ## Portfolio expansion rule
-Do not create more examples just to increase asset count. Add a new sample only when it proves a materially different buyer use case that existing examples do not cover, such as a genuinely distinct multi-file merge-readiness workflow. Reuse and adapt the existing verified examples before producing generic filler.
+Do not create more examples just to increase asset count. Add a new sample only when it proves a materially different buyer use case that existing examples do not cover. The multi-file normalization lane now covers the previously identified distinct merge-readiness use case; do not create another equivalent multi-file sample without a materially different buyer requirement.
 
 ## Concurrent-agent rule
 Before creating a new portfolio asset, search this index and the target path first. If another scheduled Foremanly run already created equivalent proof, QA and improve that work rather than duplicating it.
