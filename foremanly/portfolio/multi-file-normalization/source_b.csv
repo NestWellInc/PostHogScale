@@ -1,0 +1,5 @@
+id,name,email_address,region,joined,total_value
+B001,Stone Field Inc,contact@stonefield.example,TX,2026-08-05,640.00
+B002,Blue Mesa Co,HELLO@BLUEMESA.CO ,California,08-02-2026,"$875.00"
+B003,Maple Route,ops@mapleroute.example,New York,2026-08-06,315
+B004,Cedar Point Group,,CO,2026-08-07,"$2,050.25"
