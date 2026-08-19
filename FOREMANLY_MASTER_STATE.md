@@ -1,295 +1,120 @@
 # Foremanly Systems — Canonical Master State
 
-**Purpose:** authoritative cross-chat operating state for Foremanly Systems. Read this file before material Foremanly decisions and update it after material verified changes.
+**Purpose:** authoritative cross-chat operating state for Foremanly Systems. Read before material decisions; persist material verified changes.
 
 **Parent Factory:** `FACTORY_MASTER_STATE.md`  
 **Publication control:** `foremanly/operations/PUBLICATION_READINESS.md`  
 **Concurrent drift log:** `foremanly/operations/CONCURRENT_DRIFT_LOG.md`  
 **Shopify preview:** `foremanly/shopify/theme/UNPUBLISHED_PREVIEW_STATUS.md`  
 **Portfolio index:** `foremanly/portfolio/README.md`  
-**Detailed channel research:** `FOREMANLY_PRODUCT_CHANNEL_STRATEGY.md`
+**Digital package verification:** `foremanly/operations/DIGITAL_PACKAGE_VERIFICATION.md`
 
 ## Operating doctrine
 **Goal:** build Foremanly Systems into a successful, profitable, durable business by the end of 2026.
 
-**ALWAYS PROGRESS:** every run must complete concrete revenue-relevant or operationally durable work when available. Never create cosmetic churn, duplicate research, filler assets, overlapping SKUs, or pretend progress. If no meaningful action is available, record the exact blocker and stop.
-
-**Concurrent-worker rule:** multiple scheduled agents may change state between runs. Re-read live Shopify/GitHub state before mutations, preserve valid completed work, fix defects discovered in other workers' changes, and never revert a newer valid state merely because an older note says otherwise.
-
-**Quality loop:** after meaningful changes, check for mixed legacy branding, duplicated offers, pricing conflicts, fulfillment gaps, unsupported claims, shipping mistakes, stale assumptions, broken links, incomplete intake, policy conflicts, and conversion friction. Fix material safe issues before moving on.
-
-**Report protocol:** maintain the Report Queue below. When the owner personally messages `Report`, return verified progress, commercial state, revenue/traction, blockers, mistakes found/fixed, and every pending human/external action ranked by impact/urgency.
+Every run should complete concrete revenue-relevant or operationally durable work when available. Re-read live state before mutations because concurrent workers may have changed it. Preserve newer valid work; fix material defects rather than recreating equivalent assets.
 
 ## Company
-Foremanly Systems is a CSV and spreadsheet data-quality company.
+Foremanly Systems is a CSV and spreadsheet data-quality company. Core work: identify duplicates, missing values, formatting inconsistencies, and structural problems; clean and normalize bounded CSV/spreadsheet projects; preserve the original source file unchanged; document material changes, exceptions, and unresolved ambiguity.
 
-Core work:
-- identify duplicates, missing values, formatting inconsistencies, and structural problems
-- clean and normalize clearly bounded CSV/spreadsheet projects
-- preserve the original source file unchanged
-- document material changes, exceptions, and unresolved ambiguity
+Standard deliverables: cleaned CSV/spreadsheet when cleanup is in scope, concise quality report, and change/exception documentation.
 
-Standard deliverables:
-1. cleaned CSV/spreadsheet when cleanup is in scope
-2. concise quality report
-3. change/exception documentation
+Positioning: **Foremanly Systems cleans and validates CSV and spreadsheet data while preserving the original source file and documenting exactly what changed.**
 
-Positioning:
-**Foremanly Systems cleans and validates CSV and spreadsheet data while preserving the original source file and documenting exactly what changed.**
+Hard delivery rules: work from a copy; define duplicate/removal logic before deletion; do not fabricate missing values without an explicitly authorized deterministic rule; flag ambiguity instead of guessing; use synthetic/authorized proof only; avoid unsupported accuracy, guaranteed-import, security/compliance, or business-outcome claims.
 
-Hard delivery rules:
-- work from a copy; never silently mutate the source
-- define duplicate/removal logic before deleting records
-- do not fabricate missing values unless the client explicitly authorizes a deterministic rule
-- flag ambiguity instead of guessing
-- use synthetic or explicitly authorized data for marketing examples
-- avoid unsupported “100% accurate,” guaranteed-import, security/compliance, or business-outcome claims
-
-## Delivery workflow
-1. Preserve original.
-2. Inspect schema, headers, dimensions, encoding/delimiters, and data types.
-3. Define duplicate rules.
-4. Identify missing values.
-5. Detect formatting inconsistencies.
-6. Detect structural defects.
-7. Apply bounded explainable corrections.
-8. Flag unresolved ambiguity.
-9. Revalidate counts, uniqueness, formats, missing values, and client-defined checks.
-10. Deliver output + quality report + change/exception log according to purchased scope.
-
-## Shopify — verified store
-Last live store verification: 2026-08-19 CDT.
+## Shopify — verified store and publication state
+Last live verification: **2026-08-19 CDT**.
 - Store: **Foremanly Systems**
-- Shopify-reported canonical `.myshopify.com` domain: `bqme5r-yp.myshopify.com`
-- Historical Foremanly state may reference `foremanlysystems.myshopify.com`; do not use that older string alone to accept or reject store identity.
-- Plan: Basic
-- Currency: USD
-- Time zone: CDT
-- Country: United States
+- Shopify-reported `.myshopify.com` domain: `bqme5r-yp.myshopify.com`
+- Identity guard: verify exact store name and known Foremanly product IDs before mutations; do not rely on historical domain strings alone.
 
-**Identity guardrail:** before every Shopify mutation, verify the connected shop name is exactly **Foremanly Systems** and cross-check against the known intentional Foremanly product IDs below. Do not rely on a domain string alone.
+Live self-healing publication check on 2026-08-19 verified **all eight intentional products are DRAFT**:
+1. FS-DQA-019 — CSV Data Quality Audit — $19 — `gid://shopify/Product/8053958508587`
+2. FS-CLN-049 — CSV & Spreadsheet Cleanup — $49 — `gid://shopify/Product/8053958705195`
+3. FS-SHP-059 — Shopify Product CSV Preflight — $59 — `gid://shopify/Product/8053958770731`
+4. FS-CRM-059 — CRM Contact CSV Cleanup — $59 — `gid://shopify/Product/8053958901803`
+5. FS-MULTI-099 — Multi-File Cleanup & Normalization — $99 — `gid://shopify/Product/8053959032875`
+6. FS-IMPORT-001 — Import-Ready CSV Preparation — $79 — `gid://shopify/Product/8053966995499`
+7. FS-QA-PACK-012 — CSV Quality Control Template Pack — $12 — `gid://shopify/Product/8053959229483`
+8. FS-DIGITAL-CHECK-001 — Spreadsheet Data Quality Checklist — $9 — `gid://shopify/Product/8053967093803`
 
-## Shopify publication state — LIVE VERIFIED
-Live catalog verification on 2026-08-19 CDT found **all eight intentional Foremanly products are DRAFT**. This overrides older narrative that temporarily described six services as ACTIVE.
+**None is publication-cleared.** If any becomes ACTIVE without explicit readiness clearance in this file and `foremanly/operations/PUBLICATION_READINESS.md`, restore it to DRAFT immediately, verify, and log only the material regression.
 
-A prior concurrent worker prematurely activated six services before readiness clearance; another worker correctly restored them to DRAFT. See `foremanly/operations/CONCURRENT_DRIFT_LOG.md`.
+Archived duplicate experiments and legacy contractor products must remain archived unless deliberately supported by new evidence.
 
-### Intentional products — all DRAFT / NOT CLEARED
-1. **CSV Data Quality Audit — 1 File / Up to 1,000 Rows — $19**  
-   `gid://shopify/Product/8053958508587` · `FS-DQA-019`
-2. **CSV & Spreadsheet Cleanup — 1 File / Up to 5,000 Rows — $49**  
-   `gid://shopify/Product/8053958705195` · `FS-CLN-049`
-3. **Shopify Product CSV Preflight — 1 File / Up to 5,000 Rows — $59**  
-   `gid://shopify/Product/8053958770731` · `FS-SHP-059`
-4. **CRM Contact CSV Cleanup — 1 File / Up to 5,000 Rows — $59**  
-   `gid://shopify/Product/8053958901803` · `FS-CRM-059`
-5. **Multi-File Cleanup & Normalization — Up to 3 Files / 10,000 Rows — $99**  
-   `gid://shopify/Product/8053959032875` · `FS-MULTI-099`
-6. **Import-Ready CSV Preparation — 1 File / Up to 5,000 Rows — $79**  
-   `gid://shopify/Product/8053966995499` · `FS-IMPORT-001`
-7. **CSV Quality Control Template Pack — $12**  
-   `gid://shopify/Product/8053959229483` · `FS-QA-PACK-012`
-8. **Spreadsheet Data Quality Checklist — $9**  
-   `gid://shopify/Product/8053967093803` · `FS-DIGITAL-CHECK-001`
+## Product readiness
+All intentional products are non-shipping. Service copy has bounded scope, source-preservation language, ambiguity/non-guarantee boundaries, and intake instructions, but services still require secure/intended intake, checkout behavior, post-purchase instructions, rendered presentation QA, and coherent storefront/theme QA before publication.
 
-**Publication rule:** no intentional product may be ACTIVE unless the exact SKU is explicitly marked publication-ready in this file and `foremanly/operations/PUBLICATION_READINESS.md` after all applicable fulfillment, intake/delivery, checkout, visuals, and storefront QA gates are verified. If an intentional product becomes ACTIVE without clearance, immediately restore it to DRAFT, verify the correction, and append only the material regression to the drift log.
+Synthetic proof already exists for multiple service lanes; search `foremanly/portfolio/README.md` and publication readiness before creating more.
 
-### Archived catalog
-Archived overlapping Foremanly experiments remain archived:
-- `gid://shopify/Product/8053966536747`
-- `gid://shopify/Product/8053966635051`
-- `gid://shopify/Product/8053966798891`
-- `gid://shopify/Product/8053967290411`
+## Digital products — VERIFIED PACKAGE STATE
+This section supersedes older notes saying package artifacts were unverified.
 
-Legacy contractor products are archived. Do not reactivate archived duplicates/legacy products without deliberate documented evidence.
+### FS-DIGITAL-CHECK-001 — $9 Spreadsheet Data Quality Checklist
+Canonical sources: `foremanly/checklist-product/`.
+A clean customer ZIP was independently produced from canonical sources.
+- Package: `Foremanly-Spreadsheet-Data-Quality-Checklist.zip`
+- SHA-256: `253b422fe733cf43d7fed9a6ea88a9adf8257826bc7cc4435ed586087ab590d2`
+- Package-build/existence gate: **CLEARED**
 
-## Product readiness facts
-All eight intentional products are non-shipping and inventory tracking is not required. Service copy has bounded row/file scope, source-preservation language, ambiguity/non-guarantee boundaries, and intake instructions. These facts are necessary but **not sufficient** for publication.
+### FS-QA-PACK-012 — $12 CSV Quality Control Template Pack
+Canonical sources: `foremanly/template-pack/`.
+A clean seven-file customer ZIP was independently produced and ZIP-integrity tested.
+- Package: `Foremanly-CSV-Quality-Control-Template-Pack.zip`
+- SHA-256: `ddeb0732dd15ff204c7b39d0fe31268a7529abef68d3febdf4e7ddeda5d2495e`
+- ZIP integrity: **PASS**
+- Package-build/existence gate: **CLEARED**
 
-Remaining service gates:
-- secure/intended intake implemented and tested end-to-end
-- checkout behavior tested
-- post-purchase instructions tested
-- customer-facing visual/product presentation QA complete
-- storefront/homepage coherently Foremanly-branded
+The GitHub Actions workflow's own artifacts do not need to be treated as a publication blocker because equivalent clean packages have now been independently produced and verified. Do not waste runs repeatedly trying to prove workflow artifact existence unless the packaging workflow itself is being changed.
 
-Remaining digital gates:
-- customer ZIP/package independently verified
-- digital-delivery mechanism attached/configured
-- test purchase/download succeeds
-- customer-facing visuals QA complete
-- storefront/homepage coherently Foremanly-branded
+**Both digital products remain DRAFT / NOT CLEARED.** Remaining gates: attach/configure a reliable Shopify-compatible digital-delivery mechanism, successful test purchase/download, rendered customer-facing visual/product QA, and coherent storefront/theme QA.
 
-## Collections and navigation
+## Storefront/theme
+Customer-facing MAIN theme remains `gid://shopify/OnlineStoreTheme/189308469291` and historically contains contractor-era positioning/unsupported instant-download language. Do not scale traffic while that remains the live customer experience.
+
+Canonical unpublished preview: **Foremanly Systems — Data Quality Preview**, `gid://shopify/OnlineStoreTheme/189403922475`. Reuse it; do not create another unless missing/corrupted/intentionally superseded. It remains UNPUBLISHED pending authenticated desktop/mobile visual QA, navigation/link verification, legacy-copy check, and deliberate publication decision.
+
+## Collections/navigation
 Canonical collections:
-- **Foremanly Data Quality Services** — `gid://shopify/Collection/690943492139`
-- **Foremanly Data Quality Resources** — `gid://shopify/Collection/690943524907`
+- Foremanly Data Quality Services — `gid://shopify/Collection/690943492139`
+- Foremanly Data Quality Resources — `gid://shopify/Collection/690943524907`
 
-Main menu verified:
-1. Home
-2. Data Services → canonical services collection
-3. How Data Services Work
-4. Contact
-
-The generic Catalog link was removed. Legacy contractor explainer page is unpublished.
-
-Published pages:
-- `Contact Foremanly Systems` — `/pages/contact`
-- `CSV & Spreadsheet Data Services — Foremanly Systems` — `/pages/how-data-services-work`
-- Shopify `Your Privacy Choices`
-
-## Shopify theme/homepage
-### Customer-facing MAIN
-- GID: `gid://shopify/OnlineStoreTheme/189308469291`
-- name: `projectscale-digital-systems-v1-0-1`
-- role: `MAIN`
-
-The live MAIN homepage still has contractor-era positioning and unsupported instant-download statements. Do not scale traffic while this remains live.
-
-### Canonical unpublished preview
-Reuse this preview; do not create another unless missing/corrupted/intentionally superseded:
-- Name: **Foremanly Systems — Data Quality Preview**
-- GID: `gid://shopify/OnlineStoreTheme/189403922475`
-- role: `UNPUBLISHED`
-- processing complete / not failed
-
-The corrected Foremanly homepage is written to the preview. Source of truth for current preview status and verification details: `foremanly/shopify/theme/UNPUBLISHED_PREVIEW_STATUS.md`.
-
-Remaining gate: authenticated/browser visual QA on desktop/mobile, navigation/link verification, legacy-copy check, then deliberate publication only if it passes. Never publish merely to create activity.
+Main menu: Home; Data Services; How Data Services Work; Contact. Generic Catalog link removed. Legacy contractor explainer page unpublished.
 
 ## Pricing ladder
-- $9–$12 digital self-service entry
-- $19 diagnostic audit
-- $49 core one-file cleanup
-- $59 verticalized cleanup/preflight
-- $79 destination-spec import-ready preparation
-- $99 multi-file cleanup/normalization
-- $95+ reusable workflow/script
-- $150–$300+ scoped business-data automation when complexity warrants it
-- recurring maintenance only after repeat need is demonstrated
+$9–$12 digital self-service; $19 diagnostic audit; $49 core one-file cleanup; $59 verticalized cleanup/preflight; $79 destination-spec import-ready preparation; $99 multi-file cleanup/normalization. Larger automation/workflow work must be separately scoped; recurring maintenance only after repeat need is demonstrated.
 
-Do not silently expand starter scope for larger files, more files, heavy ambiguity resolution, complex destination mapping, or sensitive-data requirements.
-
-## Storefront evidence / cash
-Historical 2026-08-18 audit: 96 online-store sessions in the prior 30 days, zero cart additions, zero checkout starts, zero completed storefront checkouts. Much may be setup/internal traffic; do not treat it as validated demand evidence.
-
-Owner-associated paid/fulfilled test orders are not external revenue unless separately verified.
+## Commercial evidence
+Historical audit: 96 online-store sessions with zero cart additions/checkouts/completed storefront checkouts, much likely setup/internal. Do not treat this as validated demand evidence. Owner-associated test orders are not external revenue.
 
 **Verified external Foremanly revenue: $0 at this checkpoint.**
 
-## Digital products / fulfillment assets
-### $12 CSV Quality Control Template Pack
-Source/customer-facing files under `foremanly/template-pack/`:
-- `README.md`
-- `data_quality_audit_checklist.csv`
-- `quality_report_template.md`
-- `change_exception_log.csv`
-- `duplicate_rule_worksheet.csv`
-- `validation_checklist.csv`
-- `intake_scope_questionnaire.md`
-
-### $9 Spreadsheet Data Quality Checklist
-Customer-facing files under `foremanly/checklist-product/`:
-- `spreadsheet_data_quality_checklist.csv`
-- `README.md`
-
-### Packaging workflow
-`.github/workflows/foremanly-package-digital-products.yml` is intended to build:
-- `Foremanly-Spreadsheet-Data-Quality-Checklist.zip`
-- `Foremanly-CSV-Quality-Control-Template-Pack.zip`
-- SHA-256 checksums
-- GitHub Actions artifacts
-
-A successful artifact has **not yet been independently verified** through the current connected workflow-run interface. Do not claim fulfillment-ready ZIPs until verified or an equivalent clean package is produced and checked.
-
 ## Service intake
-Implementation-ready specification:
-- `foremanly/intake/service_intake_fields.csv`
-- `foremanly/intake/SERVICE_INTAKE_SPEC.md`
+Implementation-ready specification exists at `foremanly/intake/service_intake_fields.csv` and `foremanly/intake/SERVICE_INTAKE_SPEC.md`, covering order matching, file scope, output format, duplicate rules/actions, missing values, destination specs, deletion authorization, merge keys, sensitive-data/data-authorization gates, deadline, acceptance checks, ambiguity, and file upload. Secure implementation/testing remains a launch gate.
 
-It covers order matching, file scope, output format, duplicate rules/actions, required/acceptable blanks, destination specifications, row-deletion authorization, merge keys, sensitive-data gating, data authorization, external enrichment, deadline, acceptance checks, ambiguity handling, and file upload.
-
-Future secure/form intake should reproduce this logic rather than using only a generic upload box.
-
-## Synthetic portfolio
-Before creating new proof, read `foremanly/portfolio/README.md` and search the target path. Improve existing equivalent proof rather than duplicating it.
-
-Verified proof lanes include:
-- `foremanly/portfolio/general-cleanup/`
-- `foremanly/portfolio/shopify-product-csv/`
-- `foremanly/portfolio/crm-contact-cleanup/`
-
-Existing synthetic product-proof visuals already attached in Shopify and therefore should be reused rather than recreated:
-- `FS-CLN-049` — general CSV/spreadsheet cleanup proof
-- `FS-SHP-059` — Shopify product CSV preflight proof
-- `FS-CRM-059` — CRM contact cleanup proof
-
-These visuals reduce the asset gap but do **not** clear the rendered product-page visual QA gate until authenticated storefront rendering is checked.
-
-Use only clearly labeled synthetic/demo proof. Never present synthetic files as client testimonials, customer results, or guaranteed outcomes.
-
-## Marketplace assets
-Prepared:
-- `foremanly/marketplaces/FIVERR_CSV_CLEANUP_GIG.md`
-- `foremanly/marketplaces/UPWORK_PROJECT_CATALOG_CSV_CLEANUP.md`
-
-Launch one focused core-cleanup listing per marketplace first. Do not proliferate near-duplicate gigs before response evidence exists.
-
-## Channel strategy
-- **Shopify:** primary owned storefront; currently publication-held until readiness gates clear.
-- **Fiverr / Upwork Project Catalog:** prepared core-cleanup offers; authenticated publication remains an external gate.
-- **TikTok:** organic education/attention; do not assume TikTok Shop eligibility for ordinary services/digital goods.
-- **Payhip / Ko-fi / Gumroad:** secondary rails when current terms/account eligibility fit; do not incur paid plans/fees without approval.
-- **Etsy:** digital-download lane only; fee-incurring setup/listing requires owner approval.
+## Marketplace/channel assets
+Prepared core-cleanup launch assets exist for Fiverr and Upwork. Launch one focused core offer per marketplace first; do not proliferate near-duplicate listings before response evidence. TikTok is an organic education/attention lane unless current eligibility explicitly supports the exact commerce use. Secondary rails must not incur fees/subscriptions without approval.
 
 ## Metrics
-Track:
-- qualified leads, quotes, jobs won
-- gross cash, fees, verified net cash
-- average order value, delivery time, revisions, repeat customers
-- source channel and Shopify funnel metrics
-- rows processed, duplicates found, missing-value issues, formatting defects, structural repairs, exceptions, validation failures
+Track qualified leads, quotes, jobs won, gross cash, fees, verified net cash, AOV, delivery time, revisions, repeats, source channel, Shopify funnel metrics, rows processed, duplicates/missing-value/format/structure issues, exceptions, and validation failures.
 
 ## Report Queue — human / external actions
-Surface this section when the owner says `Report`.
+Surface when the owner says `Report`.
 
-1. **Authenticated visual QA + publication decision for the canonical Foremanly preview — CRITICAL.** Preview `Foremanly Systems — Data Quality Preview` (`gid://shopify/OnlineStoreTheme/189403922475`) remains UNPUBLISHED. Check desktop/mobile rendering, navigation/links, and legacy/unsupported claims before any deliberate publish.
-2. **Shopify secure service intake — HIGH.** Implement/test the prepared intake schema in a secure form/upload system. Email remains only a temporary fallback; sensitive-data suitability must be confirmed before file transfer.
-3. **Shopify digital fulfillment — HIGH.** Attach/configure the $9/$12 packages and test purchase/download. Keep both digital offers DRAFT until verified.
-4. **Checkout/post-purchase QA for service offers — HIGH.** Test actual purchase flow, non-shipping behavior, order matching, and post-purchase instructions before any service SKU receives publication clearance.
-5. **Customer-facing product/gallery visuals — HIGH.** Continue reusing synthetic or authorized portfolio proof for remaining SKUs and verify rendered product presentation; three service SKUs already have attached synthetic proof visuals.
-6. **Fiverr publication — HIGH.** Owner/browser may be required for seller profile, live category fields, gallery upload, identity/tax/phone checks, and final publish.
-7. **Upwork Project Catalog publication — HIGH.** Owner/browser may be required for profile/category/gallery, verification, tier fields, and submission/review.
-8. **Verify GitHub packaging workflow artifacts — MEDIUM.** Confirm a successful run and actual ZIP/checksum artifacts before digital fulfillment uses them.
-9. **Any new spend/legal/KYC/tax/bank/payout gate — HARD STOP.** Require owner action/approval.
-
-Do not interrupt the owner for these during routine autonomous work unless immediate safety or financial risk requires it.
-
-## Automation rules
-Every autonomous run should:
-- read `FACTORY_MASTER_STATE.md` and this file before material decisions
-- read `foremanly/operations/CONCURRENT_DRIFT_LOG.md`, `foremanly/operations/PUBLICATION_READINESS.md`, `foremanly/shopify/theme/UNPUBLISHED_PREVIEW_STATUS.md`, and `foremanly/portfolio/README.md` when relevant
-- verify Shopify identity before mutations using exact shop name plus known product IDs; do not rely on a domain string alone
-- run the self-healing publication check first when Shopify is available
-- reconcile concurrent-worker changes instead of assuming old state
-- make concrete revenue/durable-operations progress only
-- run the quality loop after implementation
-- persist material verified changes
-- stop rather than fabricate progress when nothing useful can be done
-
-Hard stops: purchases, paid ads, subscriptions, inventory, listing/setup fees, upgrades, binding legal terms, KYC/tax/bank/payout attestations, impersonation/unverifiable claims, fabricated results/testimonials, unsupported claims, and irreversible/high-risk actions.
+1. **Authenticated visual QA + publication decision for canonical Foremanly preview — CRITICAL.** Check desktop/mobile rendering, navigation/links, legacy copy, and unsupported claims before any publish.
+2. **Shopify secure service intake — HIGH.** Implement/test prepared intake schema in a suitable secure form/upload system; confirm sensitive-data suitability.
+3. **Shopify digital fulfillment — HIGH.** Both customer packages are now independently verified; attach/configure delivery and perform a successful test purchase/download before either digital SKU can clear publication.
+4. **Service checkout/post-purchase QA — HIGH.** Test purchase flow, non-shipping behavior, order matching, and customer instructions before service publication clearance.
+5. **Rendered product/gallery QA — HIGH.** Reuse existing synthetic/authorized proof and inspect actual customer rendering; do not create redundant proof merely to fill time.
+6. **Fiverr/Upwork authenticated publication — HIGH after core owned-store credibility gates.** Owner/browser/account verification and live platform fields remain external gates.
+7. **Any KYC/tax/bank/payout, CAPTCHA, binding legal acceptance, paid listing/setup/subscription/upgrade, or spend decision — OWNER REQUIRED.**
 
 ## Immediate priorities
-1. Keep all intentional products DRAFT until their exact readiness gates are cleared.
-2. Authenticated desktop/mobile visual QA of the canonical unpublished preview; publish only after it passes.
-3. Implement/test secure service intake and checkout/post-purchase flow.
-4. Verify/package the $9/$12 downloads, configure digital fulfillment, and test delivery before activation.
-5. Add/reuse synthetic or authorized product/gallery visuals for remaining offers without duplicating the three existing proof assets.
-6. Publish one focused Fiverr Gig and one focused Upwork Project Catalog offer when authenticated gates are available.
-7. Once storefront credibility and fulfillment are real, activate the smallest strongest set of offers first and begin targeted organic distribution.
-8. Add new products/services only when evidence reveals a real demand or operational gap.
-
-## Cross-chat rule
-**Normal ChatGPT:** research, decide, refine, reconcile concurrent work, update state, and make safe reversible connected-app changes.
-
-**Work / desktop:** read `FACTORY_MASTER_STATE.md`, then this file and relevant coordination files; handle browser-only authenticated actions, visual preview, uploads, publication, KYC, and supervised platform steps; write verified results back to canonical state.
+1. Keep all eight intentional products DRAFT until explicit SKU-level readiness clearance.
+2. Complete authenticated visual QA of the canonical unpublished preview and resolve the live contractor-era homepage.
+3. Implement/test secure service intake and service checkout/post-purchase behavior.
+4. Configure/test digital delivery using the already-verified $9 and $12 packages; do not repeat package-build verification work.
+5. Reuse existing proof to finish rendered product-page QA.
+6. Publish one focused Fiverr and one focused Upwork offer only through authenticated owner/browser flow when ready.
+7. Once credible channels are live, prioritize qualified acquisition and first verified external cash over expanding the SKU count.
