@@ -44,7 +44,7 @@ Live self-healing publication check on 2026-08-19 verified **all eight intention
 Archived duplicate experiments and legacy contractor products must remain archived unless deliberately supported by new evidence.
 
 ## Product readiness
-All intentional products are non-shipping. Service copy has bounded scope, source-preservation language, ambiguity/non-guarantee boundaries, and intake instructions, but services still require secure/intended intake, checkout behavior, post-purchase instructions, rendered presentation QA, and coherent storefront/theme QA before publication.
+All intentional products are non-shipping. Service copy has bounded scope, source-preservation language, ambiguity/non-guarantee boundaries, and intake instructions, but services still require secure/intended intake, checkout behavior, configured/tested post-purchase routing, rendered presentation QA, and coherent storefront/theme QA before publication.
 
 Synthetic proof already exists for multiple service lanes; search `foremanly/portfolio/README.md` and publication readiness before creating more.
 
@@ -90,8 +90,10 @@ Historical audit: 96 online-store sessions with zero cart additions/checkouts/co
 
 **Verified external Foremanly revenue: $0 at this checkpoint.**
 
-## Service intake
-Implementation-ready specification exists at `foremanly/intake/service_intake_fields.csv` and `foremanly/intake/SERVICE_INTAKE_SPEC.md`, covering order matching, file scope, output format, duplicate rules/actions, missing values, destination specs, deletion authorization, merge keys, sensitive-data/data-authorization gates, deadline, acceptance checks, ambiguity, and file upload. Secure implementation/testing remains a launch gate.
+## Service intake and post-purchase operations
+Implementation-ready intake specification exists at `foremanly/intake/service_intake_fields.csv` and `foremanly/intake/SERVICE_INTAKE_SPEC.md`, covering order matching, file scope, output format, duplicate rules/actions, missing values, destination specs, deletion authorization, merge keys, sensitive-data/data-authorization gates, deadline, acceptance checks, ambiguity, and file upload. Secure implementation/testing remains a launch gate.
+
+Post-purchase operating logic is now defined at `foremanly/intake/POST_PURCHASE_INTAKE_RUNBOOK.md`. It specifies the paid-order → intake → triage → ready/clarification/rescope/handling-review state machine, SKU routing, project-record creation, completion QA, and consistent internal project statuses. This clears the missing operating-design portion of post-purchase readiness, but not the actual configured/tested customer routing gate.
 
 ## Marketplace/channel assets
 Prepared core-cleanup launch assets exist for Fiverr and Upwork. Launch one focused core offer per marketplace first; do not proliferate near-duplicate listings before response evidence. TikTok is an organic education/attention lane unless current eligibility explicitly supports the exact commerce use. Secondary rails must not incur fees/subscriptions without approval.
@@ -105,7 +107,7 @@ Surface when the owner says `Report`.
 1. **Authenticated visual QA + publication decision for canonical Foremanly preview — CRITICAL.** Check desktop/mobile rendering, navigation/links, legacy copy, and unsupported claims before any publish.
 2. **Shopify secure service intake — HIGH.** Implement/test prepared intake schema in a suitable secure form/upload system; confirm sensitive-data suitability.
 3. **Shopify digital fulfillment — HIGH.** Both customer packages are now independently verified; attach/configure delivery and perform a successful test purchase/download before either digital SKU can clear publication.
-4. **Service checkout/post-purchase QA — HIGH.** Test purchase flow, non-shipping behavior, order matching, and customer instructions before service publication clearance.
+4. **Service checkout/post-purchase QA — HIGH.** Post-purchase operating runbook now exists; configure the actual customer routing/intake flow, then test purchase flow, non-shipping behavior, order matching, and customer instructions before service publication clearance.
 5. **Rendered product/gallery QA — HIGH.** Reuse existing synthetic/authorized proof and inspect actual customer rendering; do not create redundant proof merely to fill time.
 6. **Fiverr/Upwork authenticated publication — HIGH after core owned-store credibility gates.** Owner/browser/account verification and live platform fields remain external gates.
 7. **Any KYC/tax/bank/payout, CAPTCHA, binding legal acceptance, paid listing/setup/subscription/upgrade, or spend decision — OWNER REQUIRED.**
@@ -113,7 +115,7 @@ Surface when the owner says `Report`.
 ## Immediate priorities
 1. Keep all eight intentional products DRAFT until explicit SKU-level readiness clearance.
 2. Complete authenticated visual QA of the canonical unpublished preview and resolve the live contractor-era homepage.
-3. Implement/test secure service intake and service checkout/post-purchase behavior.
+3. Implement/test secure service intake and configure/test post-purchase routing using the completed runbook.
 4. Configure/test digital delivery using the already-verified $9 and $12 packages; do not repeat package-build verification work.
 5. Reuse existing proof to finish rendered product-page QA.
 6. Publish one focused Fiverr and one focused Upwork offer only through authenticated owner/browser flow when ready.
