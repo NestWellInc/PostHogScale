@@ -1,0 +1,10 @@
+issue_type,scope,rule,outcome,affected_count,notes
+duplicate_record,customer_id=C003,Use customer_id as key and retain the consistent more-complete row,removed,1,Retained row includes missing email while other values remain consistent
+missing_value,C002.phone,Do not invent missing source values,retained_blank,1,Flagged as unresolved source-data gap
+missing_value,C006.email,Do not invent missing source values,retained_blank,1,Flagged as unresolved source-data gap
+name_format,retained_rows,Trim whitespace and normalize clearly inconsistent presentation casing,corrected,3,C001 C004 C005
+email_format,retained_rows,Trim whitespace and lowercase populated email addresses,corrected,3,C001 C004 C007
+phone_format,retained_rows,Normalize populated synthetic US phone values to +1##########,corrected,9,C002 remains blank
+date_format,retained_rows,Normalize parseable signup dates to YYYY-MM-DD,corrected,5,C001 C005 C006 C008 C009
+status_format,retained_rows,Trim and normalize agreed status labels to lowercase,corrected,8,C002 and C005 already matched target values
+amount_format,retained_rows,Remove display symbols/separators and normalize to two decimals,corrected,8,C003 and C007 already matched target numeric precision
