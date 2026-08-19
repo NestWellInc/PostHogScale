@@ -2,16 +2,16 @@
 
 **Last live verification:** 2026-08-19 CDT / 2026-08-19 UTC
 
-Purpose: compact, current control surface for Shopify publication state. This file resolves stale narrative elsewhere; live Shopify state remains the ultimate source of truth.
+Purpose: compact, current control surface for Shopify publication state. Live Shopify state remains the ultimate source of truth.
 
 ## Shopify identity guard
-Connected Shopify verification identifies the shop as **Foremanly Systems**. Domain strings have differed across tool surfaces over time, so do **not** accept or reject store identity by domain alone. Require the connected shop name to be exactly `Foremanly Systems` and confirm the intentional Foremanly product IDs below resolve in that same shop before mutations. If either check fails, stop Shopify mutations and investigate instead of guessing.
+Connected Shopify verification identifies the shop as **Foremanly Systems**. Domain strings have differed across tool surfaces over time, so do **not** accept or reject store identity by domain alone. Require the connected shop name to be exactly `Foremanly Systems` and confirm the intentional Foremanly product IDs below resolve in that same shop before mutations.
 
 ## Rule
-No intentional Foremanly product is publication-ready unless every applicable gate below is explicitly verified. `ACTIVE` is not evidence of readiness. If an automation finds an intentional product ACTIVE without explicit clearance here and in `FOREMANLY_MASTER_STATE.md`, restore it to DRAFT.
+No intentional Foremanly product is publication-ready unless every applicable gate is explicitly verified. `ACTIVE` is not evidence of readiness. If an automation finds an intentional product ACTIVE without explicit clearance here and in `FOREMANLY_MASTER_STATE.md`, restore it to DRAFT.
 
 ## Intentional products — current live status
-All eight intentional Foremanly products were live-verified as **DRAFT** on this checkpoint.
+All eight intentional Foremanly products were live-verified as **DRAFT** on 2026-08-19.
 
 | SKU | Offer | Price | Status | Publication clearance |
 |---|---|---:|---|---|
@@ -40,82 +40,33 @@ Before clearing any service SKU:
 - [ ] current storefront/homepage presentation is coherent with Foremanly positioning
 
 ## Per-SKU presentation evidence
-### FS-DQA-019 — CSV Data Quality Audit
-The DRAFT audit product now reuses the verified general-cleanup synthetic proof image as an **issue-identification illustration**, not as evidence that cleanup is included in the $19 audit.
+Existing evidence already attached in Shopify should be reused, not recreated:
+- **FS-DQA-019:** general-cleanup synthetic proof reused only as an issue-identification illustration; audit remains diagnostic-only.
+- **FS-CLN-049:** verified general-cleanup synthetic before/after proof attached.
+- **FS-SHP-059:** verified Shopify product CSV preflight synthetic proof attached.
+- **FS-CRM-059:** verified CRM contact cleanup synthetic proof attached.
+- **FS-MULTI-099:** verified multi-file normalization synthetic proof attached.
+- **FS-IMPORT-001:** bounded import-ready process illustration attached.
 
-Verified live on 2026-08-19:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- alt text explicitly says it is a synthetic CSV cleanup example illustrating issues an audit can identify and is not a client result
-- product description still clearly states diagnostic review only, no silent cleanup or row deletion, and cleanup is purchased separately
-- underlying reusable demo is the verified `foremanly/portfolio/general-cleanup/` lane: 11 input rows → 10 output rows, 7 columns preserved, two rows shared duplicate key `C003`, and one duplicate was removed only under the documented cleanup rule
-
-This is intentional proof reuse rather than a new portfolio lane. It reduces the audit SKU's presentation gap without implying that the audit itself performs the demonstrated cleanup. **It does not clear the visual or publication gate.** Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
-
-### FS-CLN-049 — CSV & Spreadsheet Cleanup
-A synthetic before/after proof image based on the already-verified `foremanly/portfolio/general-cleanup/` example is attached to the DRAFT Shopify product.
-
-Verified live after attachment:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- image alt text identifies it as a synthetic before-and-after CSV cleanup example
-- underlying demonstration remains 11 input rows → 10 output rows, 7 columns preserved, one explicit duplicate removal, formatting normalization, and unknown values left unguessed
-
-This reduces the presentation gap for FS-CLN-049 but **does not clear the visual or publication gate**. Customer-facing rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
-
-### FS-SHP-059 — Shopify Product CSV Preflight
-A synthetic before/after proof image based on the existing verified `foremanly/portfolio/shopify-product-csv/` example is attached to the DRAFT Shopify product.
-
-Verified live after attachment:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- alt text clearly identifies the image as a synthetic Shopify product CSV preflight example
-- visual reflects the existing 4-row / 14-column demonstration: rows and columns preserved, handles/price/status/publication/default-option/tax/shipping formatting normalized under explicit scenario rules, and no titles/SKUs/vendors invented
-- the visual explicitly states that import acceptance depends on the buyer file, store configuration, and current Shopify requirements
-
-This reduces the presentation gap for FS-SHP-059 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
-
-### FS-CRM-059 — CRM Contact CSV Cleanup
-A synthetic before/after proof image based on the already-verified `foremanly/portfolio/crm-contact-cleanup/` example is attached to the DRAFT Shopify product.
-
-Verified live after attachment:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- alt text identifies it as a synthetic CRM contact CSV cleanup example
-- the visual matches the verified portfolio result: 12 input rows → 11 output rows, 8 columns preserved, one duplicate removed under normalized nonblank-email exact-match logic, deterministic email/phone/state/date formatting, and blank contact fields retained rather than invented
-- the visual explicitly states that it is synthetic and is not client data, a testimonial, enrichment, or guaranteed CRM import acceptance
-
-This reduces the presentation gap for FS-CRM-059 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
-
-### FS-MULTI-099 — Multi-File Cleanup & Normalization
-A synthetic process/proof image based on the verified `foremanly/portfolio/multi-file-normalization/` lane is attached to the DRAFT Shopify product as of 2026-08-19.
-
-Verified live after attachment:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- alt text clearly identifies it as a synthetic multi-file CSV normalization example
-- visual reflects the portfolio index facts: two differently structured source files, 8 total input rows → 8 output rows, zero silent deletions, source provenance retained, deterministic schema/format normalization, and one cross-file duplicate candidate retained pending an explicit buyer rule
-- visual explicitly states that the example is synthetic and is not client data, a testimonial, or a guaranteed outcome
-
-This closes the missing proof-asset gap for FS-MULTI-099 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
-
-### FS-IMPORT-001 — Import-Ready CSV Preparation
-A customer-facing process illustration based strictly on the existing bounded product definition is attached to the DRAFT Shopify product as of 2026-08-19. It is a process illustration, not fabricated client proof.
-
-Verified live after attachment:
-- product remains `DRAFT`
-- featured image exists on Shopify CDN
-- alt text identifies it as a synthetic process illustration
-- visual shows the existing workflow: preserve the source CSV, use the buyer-supplied destination schema/template/import specification, map and validate agreed fields/formats, flag ambiguity rather than guess, and deliver the prepared working copy plus quality report, change/exception log, and unresolved-record list
-- visual explicitly states that Foremanly does not invent missing business data and does not guarantee destination-platform acceptance
-- product price, SKU, scope, description, and publication status were not otherwise changed
-
-Detailed durable record: `foremanly/shopify/product-proof/FS-IMPORT-001.md`.
-
-This reduces the presentation gap for FS-IMPORT-001 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
+These assets reduce presentation gaps but do **not** clear rendered product-page QA or publication.
 
 ## Digital-product gates
-Before clearing either digital SKU:
+### FS-DIGITAL-CHECK-001 — Spreadsheet Data Quality Checklist
+- [x] distinct source deliverable exists in GitHub
+- [x] product is non-shipping
+- [x] clean customer ZIP independently produced and SHA-256 hashed on 2026-08-19
+- [ ] digital-delivery mechanism attached/configured
+- [ ] test purchase/download succeeds
+- [ ] customer-facing visuals QA complete
+- [ ] current storefront/homepage presentation is coherent with Foremanly positioning
+
+Verified package: `Foremanly-Spreadsheet-Data-Quality-Checklist.zip`  
+SHA-256: `253b422fe733cf43d7fed9a6ea88a9adf8257826bc7cc4435ed586087ab590d2`  
+Durable verification record: `foremanly/operations/DIGITAL_PACKAGE_VERIFICATION.md`.
+
+This clears only the package-build/existence gate for FS-DIGITAL-CHECK-001. The Shopify product remains DRAFT / NOT CLEARED.
+
+### FS-QA-PACK-012 — CSV Quality Control Template Pack
 - [x] distinct source deliverable exists in GitHub
 - [x] product is non-shipping
 - [ ] customer ZIP/package independently verified
@@ -128,4 +79,4 @@ Before clearing either digital SKU:
 Use the existing unpublished theme `Foremanly Systems — Data Quality Preview` (`gid://shopify/OnlineStoreTheme/189403922475`). It remains UNPUBLISHED pending authenticated desktop/mobile visual QA. Do not create another preview unless the existing one is missing, corrupted, or deliberately superseded with documentation.
 
 ## Concurrency note
-A prior concurrent worker prematurely activated six service SKUs; another worker restored them to DRAFT. See `foremanly/operations/CONCURRENT_DRIFT_LOG.md`. Future workers should check this file plus live Shopify before any product mutation and should not infer readiness from stale master-state prose.
+A prior concurrent worker prematurely activated six service SKUs; another worker restored them to DRAFT. Future workers should check this file plus live Shopify before any product mutation and should not infer readiness from stale master-state prose.
