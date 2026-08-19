@@ -1,0 +1,128 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-proof",
+      "settings": {
+        "eyebrow": "Foremanly Systems — CSV & Spreadsheet Data Quality",
+        "heading": "Clean data. Documented changes. Original preserved.",
+        "body": "Foremanly Systems finds duplicates, missing values, formatting inconsistencies, and structural problems in clearly scoped CSV and spreadsheet projects. Work is performed on a copy, ambiguous cases are flagged, and material changes are documented.",
+        "primary_label": "How data services work",
+        "primary_link": "shopify://pages/how-data-services-work",
+        "secondary_label": "Contact Foremanly",
+        "secondary_link": "shopify://pages/contact"
+      }
+    },
+    "process": {
+      "type": "verification-strip",
+      "blocks": {
+        "scope": {
+          "type": "step",
+          "settings": {
+            "heading": "Define the scope",
+            "body": "Confirm the file count, cleanup goal, duplicate rules, required fields, output format, and any destination requirements before work begins."
+          }
+        },
+        "preserve": {
+          "type": "step",
+          "settings": {
+            "heading": "Preserve the source",
+            "body": "The original source file stays unchanged. Cleanup and validation are performed on a working copy."
+          }
+        },
+        "clean": {
+          "type": "step",
+          "settings": {
+            "heading": "Clean and validate",
+            "body": "Apply only the agreed, explainable corrections and rerun the relevant checks after cleanup."
+          }
+        },
+        "document": {
+          "type": "step",
+          "settings": {
+            "heading": "Receive documented results",
+            "body": "Done-for-you cleanup projects include the cleaned working file, a concise quality report, and change or exception documentation according to the purchased scope."
+          }
+        }
+      },
+      "block_order": ["scope", "preserve", "clean", "document"],
+      "settings": {}
+    },
+    "confidence": {
+      "type": "shopping-confidence",
+      "blocks": {
+        "original": {
+          "type": "fact",
+          "settings": {
+            "heading": "Original preserved",
+            "body": "Foremanly works from a copy rather than silently overwriting the source file.",
+            "link_label": ""
+          }
+        },
+        "rules": {
+          "type": "fact",
+          "settings": {
+            "heading": "Explicit cleanup rules",
+            "body": "Duplicate removal, missing-value handling, and destination-specific changes follow agreed rules instead of guesswork.",
+            "link_label": ""
+          }
+        },
+        "audit": {
+          "type": "fact",
+          "settings": {
+            "heading": "Changes and exceptions documented",
+            "body": "Material corrections, retained exceptions, and unresolved ambiguity are recorded so the output is reviewable.",
+            "link_label": ""
+          }
+        }
+      },
+      "block_order": ["original", "rules", "audit"],
+      "settings": {
+        "heading": "A data-quality process you can review"
+      }
+    },
+    "reviews": {
+      "type": "verified-reviews",
+      "settings": {
+        "review_system_approved": false,
+        "heading": "Real customer reviews only",
+        "body": "Foremanly does not invent reviews, testimonials, or customer results. Verified feedback can be added after eligible completed work."
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "files": {
+          "type": "question",
+          "settings": {
+            "question": "What files can Foremanly work with?",
+            "answer": "Foremanly focuses on clearly scoped CSV and spreadsheet projects. Exact suitability depends on the file structure, size, requested checks, output format, and any destination requirements."
+          }
+        },
+        "missing": {
+          "type": "question",
+          "settings": {
+            "question": "Will missing values be filled automatically?",
+            "answer": "Not by guesswork. Missing values remain blank or are flagged unless you provide an explicit deterministic rule for how they should be handled."
+          }
+        },
+        "duplicates": {
+          "type": "question",
+          "settings": {
+            "question": "Will duplicate rows be deleted automatically?",
+            "answer": "Only when the duplicate definition and removal rule are explicit. Ambiguous suspected duplicates can be flagged instead of removed."
+          }
+        },
+        "sensitive": {
+          "type": "question",
+          "settings": {
+            "question": "Can I send confidential or sensitive data?",
+            "answer": "Contact Foremanly before sending sensitive or confidential data so project suitability and handling requirements can be reviewed. Do not send passwords, payment card data, secret credentials, or data you are not authorized to share."
+          }
+        }
+      },
+      "block_order": ["files", "missing", "duplicates", "sensitive"],
+      "settings": {}
+    }
+  },
+  "order": ["hero", "process", "confidence", "reviews", "faq"]
+}
