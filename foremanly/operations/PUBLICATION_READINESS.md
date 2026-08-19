@@ -64,16 +64,21 @@ Verified package: `Foremanly-Spreadsheet-Data-Quality-Checklist.zip`
 SHA-256: `253b422fe733cf43d7fed9a6ea88a9adf8257826bc7cc4435ed586087ab590d2`  
 Durable verification record: `foremanly/operations/DIGITAL_PACKAGE_VERIFICATION.md`.
 
-This clears only the package-build/existence gate for FS-DIGITAL-CHECK-001. The Shopify product remains DRAFT / NOT CLEARED.
-
 ### FS-QA-PACK-012 — CSV Quality Control Template Pack
 - [x] distinct source deliverable exists in GitHub
 - [x] product is non-shipping
-- [ ] customer ZIP/package independently verified
+- [x] clean customer ZIP independently produced, ZIP-integrity tested, and SHA-256 hashed on 2026-08-19
 - [ ] digital-delivery mechanism attached/configured
 - [ ] test purchase/download succeeds
 - [ ] customer-facing visuals QA complete
 - [ ] current storefront/homepage presentation is coherent with Foremanly positioning
+
+Verified package: `Foremanly-CSV-Quality-Control-Template-Pack.zip`  
+SHA-256: `ddeb0732dd15ff204c7b39d0fe31268a7529abef68d3febdf4e7ddeda5d2495e`  
+ZIP integrity: PASS · expected customer files: 7  
+Durable verification record: `foremanly/operations/DIGITAL_PACKAGE_VERIFICATION.md`.
+
+Package verification clears only the package-build/existence gate. Both digital products remain DRAFT / NOT CLEARED until delivery, test-purchase/download, rendered presentation, and storefront gates are explicitly verified.
 
 ## Theme dependency
 Use the existing unpublished theme `Foremanly Systems — Data Quality Preview` (`gid://shopify/OnlineStoreTheme/189403922475`). It remains UNPUBLISHED pending authenticated desktop/mobile visual QA. Do not create another preview unless the existing one is missing, corrupted, or deliberately superseded with documentation.
