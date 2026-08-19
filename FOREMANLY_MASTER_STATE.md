@@ -58,18 +58,19 @@ Hard delivery rules:
 10. Deliver output + quality report + change/exception log according to purchased scope.
 
 ## Shopify — verified store
-Last live store verification: 2026-08-18 CDT / 2026-08-19 UTC.
+Last live store verification: 2026-08-19 CDT.
 - Store: **Foremanly Systems**
-- Domain: `foremanlysystems.myshopify.com`
+- Shopify-reported canonical `.myshopify.com` domain: `bqme5r-yp.myshopify.com`
+- Historical Foremanly state may reference `foremanlysystems.myshopify.com`; do not use that older string alone to accept or reject store identity.
 - Plan: Basic
 - Currency: USD
 - Time zone: CDT
 - Country: United States
 
-**Guardrail:** verify the connected shop is Foremanly Systems before every Shopify mutation.
+**Identity guardrail:** before every Shopify mutation, verify the connected shop name is exactly **Foremanly Systems** and cross-check against the known intentional Foremanly product IDs below. Do not rely on a domain string alone.
 
 ## Shopify publication state — LIVE VERIFIED
-Live catalog verification during the latest reconciliation found **all eight intentional Foremanly products are DRAFT**. This overrides older narrative that temporarily described six services as ACTIVE.
+Live catalog verification on 2026-08-19 CDT found **all eight intentional Foremanly products are DRAFT**. This overrides older narrative that temporarily described six services as ACTIVE.
 
 A prior concurrent worker prematurely activated six services before readiness clearance; another worker correctly restored them to DRAFT. See `foremanly/operations/CONCURRENT_DRIFT_LOG.md`.
 
@@ -216,6 +217,14 @@ Before creating new proof, read `foremanly/portfolio/README.md` and search the t
 Verified proof lanes include:
 - `foremanly/portfolio/general-cleanup/`
 - `foremanly/portfolio/shopify-product-csv/`
+- `foremanly/portfolio/crm-contact-cleanup/`
+
+Existing synthetic product-proof visuals already attached in Shopify and therefore should be reused rather than recreated:
+- `FS-CLN-049` — general CSV/spreadsheet cleanup proof
+- `FS-SHP-059` — Shopify product CSV preflight proof
+- `FS-CRM-059` — CRM contact cleanup proof
+
+These visuals reduce the asset gap but do **not** clear the rendered product-page visual QA gate until authenticated storefront rendering is checked.
 
 Use only clearly labeled synthetic/demo proof. Never present synthetic files as client testimonials, customer results, or guaranteed outcomes.
 
@@ -248,7 +257,7 @@ Surface this section when the owner says `Report`.
 2. **Shopify secure service intake — HIGH.** Implement/test the prepared intake schema in a secure form/upload system. Email remains only a temporary fallback; sensitive-data suitability must be confirmed before file transfer.
 3. **Shopify digital fulfillment — HIGH.** Attach/configure the $9/$12 packages and test purchase/download. Keep both digital offers DRAFT until verified.
 4. **Checkout/post-purchase QA for service offers — HIGH.** Test actual purchase flow, non-shipping behavior, order matching, and post-purchase instructions before any service SKU receives publication clearance.
-5. **Customer-facing product/gallery visuals — HIGH.** Produce/approve synthetic or authorized visuals based on existing portfolio proof and verify rendered product presentation.
+5. **Customer-facing product/gallery visuals — HIGH.** Continue reusing synthetic or authorized portfolio proof for remaining SKUs and verify rendered product presentation; three service SKUs already have attached synthetic proof visuals.
 6. **Fiverr publication — HIGH.** Owner/browser may be required for seller profile, live category fields, gallery upload, identity/tax/phone checks, and final publish.
 7. **Upwork Project Catalog publication — HIGH.** Owner/browser may be required for profile/category/gallery, verification, tier fields, and submission/review.
 8. **Verify GitHub packaging workflow artifacts — MEDIUM.** Confirm a successful run and actual ZIP/checksum artifacts before digital fulfillment uses them.
@@ -260,7 +269,7 @@ Do not interrupt the owner for these during routine autonomous work unless immed
 Every autonomous run should:
 - read `FACTORY_MASTER_STATE.md` and this file before material decisions
 - read `foremanly/operations/CONCURRENT_DRIFT_LOG.md`, `foremanly/operations/PUBLICATION_READINESS.md`, `foremanly/shopify/theme/UNPUBLISHED_PREVIEW_STATUS.md`, and `foremanly/portfolio/README.md` when relevant
-- verify Shopify identity before mutations
+- verify Shopify identity before mutations using exact shop name plus known product IDs; do not rely on a domain string alone
 - run the self-healing publication check first when Shopify is available
 - reconcile concurrent-worker changes instead of assuming old state
 - make concrete revenue/durable-operations progress only
@@ -275,7 +284,7 @@ Hard stops: purchases, paid ads, subscriptions, inventory, listing/setup fees, u
 2. Authenticated desktop/mobile visual QA of the canonical unpublished preview; publish only after it passes.
 3. Implement/test secure service intake and checkout/post-purchase flow.
 4. Verify/package the $9/$12 downloads, configure digital fulfillment, and test delivery before activation.
-5. Add synthetic/authorized product/gallery visuals by reusing existing portfolio evidence rather than generic stock art.
+5. Add/reuse synthetic or authorized product/gallery visuals for remaining offers without duplicating the three existing proof assets.
 6. Publish one focused Fiverr Gig and one focused Upwork Project Catalog offer when authenticated gates are available.
 7. Once storefront credibility and fulfillment are real, activate the smallest strongest set of offers first and begin targeted organic distribution.
 8. Add new products/services only when evidence reveals a real demand or operational gap.
