@@ -1,0 +1,8 @@
+issue_type,rule_applied,affected_records_or_cells,action,notes
+Duplicate contact,Normalized nonblank email exact-match; retain first occurrence,1 record,Removed,C010 matched C001 after email normalization; C001 retained
+Email formatting,Trim surrounding whitespace and lowercase nonblank emails,3 cells,Corrected,C001 C003 C007
+Phone formatting,Normalize valid 10-digit US demo numbers to +1-AAA-BBB-CCCC,11 cells,Corrected,C008 was blank and remained blank
+State formatting,Trim whitespace and normalize Illinois variants to IL,5 cells,Corrected,C001 C003 C004 C007 C011
+Signup date formatting,Normalize recognized date representations to YYYY-MM-DD,5 cells,Corrected,C001 C003 C004 C005 C007
+Missing phone,No value invented,1 record,Flagged,C008 retained with blank phone
+Missing email,No value invented,1 record,Flagged,C009 retained with blank email
