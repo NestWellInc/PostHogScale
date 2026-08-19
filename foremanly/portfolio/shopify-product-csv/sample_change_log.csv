@@ -1,0 +1,8 @@
+issue_type,scope,rule,outcome,affected_count,notes
+url_handle,retained_rows,Normalize to lowercase hyphenated handle using letters dashes and numbers,corrected,3,Canvas Tote Digital Guide and Water Bottle
+publication_value,retained_rows,Use documented boolean and apply agreed draft-unpublished rule,corrected,2,Canvas Tote normalized; Digital Guide set unpublished under scenario rule
+status_value,retained_rows,Normalize to agreed documented lowercase status values,corrected,2,Canvas Tote and Digital Guide
+variant_dependency,Canvas Tote,Single default variant with SKU requires Option1 name/value in this demo,filled,2,Set both cells to Default Title
+price_format,retained_rows,Remove currency symbols and normalize to two decimal places,corrected,4,All four rows
+charge_tax,Canvas Tote,Normalize documented boolean value,corrected,1,TRUE to true
+requires_shipping,retained_rows,Normalize documented boolean and apply agreed digital-no-shipping rule,corrected,3,Canvas Tote and Water Bottle normalized; Digital Guide set false under scenario rule
