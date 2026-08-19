@@ -1,0 +1,5 @@
+Title,URL handle,Description,Vendor,Type,Tags,Published on online store,Status,SKU,Option1 name,Option1 value,Price,Charge tax,Requires shipping
+Canvas Tote,"Canvas Tote",Synthetic demo item,Demo Merchant,Accessories,"summer,bag",yes,ACTIVE,TOTE-001,,,$24.99,TRUE,TRUE
+Desk Mat,desk-mat,Synthetic demo item,Demo Merchant,Desk,"office,desk",true,active,MAT-001,Default Title,Default Title,35,true,true
+Digital Guide,Digital_Guide,Synthetic demo download,Demo Merchant,Digital,"guide,digital",TRUE,Draft,GUIDE-001,Default Title,Default Title,$9.00,false,yes
+Water Bottle,"water-bottle ",Synthetic demo item,Demo Merchant,Drinkware,bottle,false,active,BOT-001,Default Title,Default Title,18.5,true,TRUE
