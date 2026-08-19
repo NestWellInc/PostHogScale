@@ -60,6 +60,18 @@ Verified live after attachment:
 
 This reduces the presentation gap for FS-SHP-059 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
 
+### FS-CRM-059 — CRM Contact CSV Cleanup
+A synthetic before/after proof image based on the already-verified `foremanly/portfolio/crm-contact-cleanup/` example was attached to the DRAFT Shopify product on 2026-08-18 CDT / 2026-08-19 UTC.
+
+Verified live after attachment:
+- product remains `DRAFT`
+- featured image exists on Shopify CDN
+- alt text identifies it as a synthetic CRM contact CSV cleanup example
+- the visual matches the verified portfolio result: 12 input rows → 11 output rows, 8 columns preserved, one duplicate removed under normalized nonblank-email exact-match logic, deterministic email/phone/state/date formatting, and blank contact fields retained rather than invented
+- the visual explicitly states that it is synthetic and is not client data, a testimonial, enrichment, or guaranteed CRM import acceptance
+
+This reduces the presentation gap for FS-CRM-059 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
+
 ## Digital-product gates
 Before clearing either digital SKU:
 - [x] distinct source deliverable exists in GitHub
