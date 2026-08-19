@@ -1,8 +1,15 @@
 # Foremanly Systems — Publication Readiness Control
 
-**Last live verification:** 2026-08-18 CDT / 2026-08-19 UTC
+**Last live verification:** 2026-08-19 CDT / 2026-08-19 UTC
 
 Purpose: compact, current control surface for Shopify publication state. This file resolves stale narrative elsewhere; live Shopify state remains the ultimate source of truth.
+
+## Shopify identity guard
+Latest connected Admin GraphQL verification:
+- shop name: **Foremanly Systems**
+- Shopify-reported canonical `myshopifyDomain`: `bqme5r-yp.myshopify.com`
+
+Older state references `foremanlysystems.myshopify.com`. Do **not** reject the connected store solely because that older domain string differs. For safety, require the connected shop name to be exactly `Foremanly Systems` and confirm the intentional Foremanly product IDs below resolve in that same shop before mutations. If either check fails, stop Shopify mutations and investigate instead of guessing.
 
 ## Rule
 No intentional Foremanly product is publication-ready unless every applicable gate below is explicitly verified. `ACTIVE` is not evidence of readiness. If an automation finds an intentional product ACTIVE without explicit clearance here and in `FOREMANLY_MASTER_STATE.md`, restore it to DRAFT.
@@ -25,7 +32,7 @@ Archived experiments and legacy contractor products remain archived and are not 
 
 ## Service-offer gates
 Before clearing any service SKU:
-- [ ] connected store identity re-verified as Foremanly Systems
+- [x] connected store identity re-verified as Foremanly Systems
 - [x] bounded scope and price defined
 - [x] source-preservation and ambiguity rules present
 - [x] product is non-shipping
