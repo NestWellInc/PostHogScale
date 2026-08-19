@@ -48,6 +48,18 @@ Verified live after attachment:
 
 This reduces the presentation gap for FS-CLN-049 but **does not clear the visual gate**. Customer-facing rendered product-page QA is still required, and the other service SKUs still need appropriate non-duplicative visuals or deliberate evidence that a shared visual is sufficient.
 
+### FS-SHP-059 — Shopify Product CSV Preflight
+A synthetic before/after proof image based on the existing verified `foremanly/portfolio/shopify-product-csv/` example was attached to the DRAFT Shopify product on 2026-08-18 CDT / 2026-08-19 UTC after re-checking current Shopify Help Center product-CSV guidance.
+
+Verified live after attachment:
+- product remains `DRAFT`
+- featured image exists on Shopify CDN
+- alt text clearly identifies the image as a synthetic Shopify product CSV preflight example
+- visual reflects the existing 4-row / 14-column demonstration: rows and columns preserved, handles/price/status/publication/default-option/tax/shipping formatting normalized under explicit scenario rules, and no titles/SKUs/vendors invented
+- the visual explicitly states that import acceptance depends on the buyer file, store configuration, and current Shopify requirements
+
+This reduces the presentation gap for FS-SHP-059 but **does not clear the visual or publication gate**. Rendered product-page QA, secure intake, checkout/post-purchase QA, and coherent storefront/theme presentation are still required.
+
 ## Digital-product gates
 Before clearing either digital SKU:
 - [x] distinct source deliverable exists in GitHub
