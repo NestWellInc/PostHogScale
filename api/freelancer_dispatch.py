@@ -15,13 +15,13 @@ from freelancersdk.resources.users import get_self_user_id
 
 TOKEN_ENV = "FLN_OAUTH_TOKEN"
 
-# Hard exclusions: these are not unattended machine-work opportunities for this Factory.
 HUMAN_SPECIFIC = [
     r"survey", r"focus group", r"personal experience", r"mystery shop",
     r"video of yourself", r"voice sample", r"record yourself", r"in-person",
     r"on-site", r"onsite", r"captcha", r"different ip", r"human judgment",
     r"manual only", r"no automation", r"no scripts", r"must be done manually",
     r"phone calls?", r"cold call", r"appointment setter", r"virtual assistant",
+    r"local candidate", r"must be located", r"onsite required",
 ]
 
 PROHIBITED = [
@@ -30,25 +30,37 @@ PROHIBITED = [
     r"credential stuffing", r"scrape.*login", r"bypass.*paywall",
 ]
 
-# Creative, professional-judgment, physical, or broad software-development work is review-only.
+# Anything here is never autonomously bid during the proof stage. It may still be reviewed later.
 REVIEW_ONLY = [
     r"illustrat", r"logo", r"flyer", r"graphic design", r"book cover", r"video ad",
     r"copywrit", r"seo", r"social media", r"marketing", r"lead gen", r"lead generation",
-    r"bookkeep", r"accounting", r"financial advice", r"legal", r"medical", r"architect",
+    r"lead sourcing", r"prospect", r"sales leads?", r"contact list", r"email list",
+    r"bookkeep", r"accounting", r"financial advice", r"investment", r"forex", r"trading bot",
+    r"crypto", r"gold trading", r"stock trading", r"legal", r"medical", r"architect",
     r"civil engineer", r"storm water", r"mobile app", r"flutter", r"react native",
     r"full.?stack", r"web development", r"website development", r"e.?commerce store",
     r"tensorflow", r"machine learning model", r"llm application", r"ai agent developer",
     r"business assistant", r"file management assistant", r"secretarial", r"product description",
+    r"dashboard.*analysis", r"analysis dashboard", r"review visualization",
+    r"supplier.*api bridge", r"api bridge", r"manufacturing lead",
 ]
 
-# Narrow classes we can safely execute and QA with high confidence.
-STRICT_OUTPUT_PATTERNS = [
-    r"excel", r"\.xlsx", r"csv", r"spreadsheet", r"data clean", r"data cleansing",
-    r"deduplic", r"duplicate", r"normalize", r"reconcil", r"data extraction",
-    r"pdf.*(?:excel|csv|table|extract)", r"(?:excel|csv|table).*pdf",
-    r"web scraping", r"scrap(?:e|ing).*public", r"public data",
-    r"mysql", r"database import", r"database.*(?:insert|update|upsert)",
-    r"excel.*database", r"database.*excel", r"json", r"xml",
+# Initial autonomous whitelist: deliberately boring, deterministic data/file operations.
+CORE_CLASSES = [
+    r"(?:clean|cleaning|cleanse|cleansing).*(?:excel|csv|spreadsheet|data)",
+    r"(?:excel|csv|spreadsheet|data).*(?:clean|cleaning|cleanse|cleansing)",
+    r"deduplic|de-duplic|remove duplicates?",
+    r"normaliz|reconcil|standardiz",
+    r"pdf.*(?:excel|csv|spreadsheet|table|extract)",
+    r"(?:excel|csv|spreadsheet|table).*pdf",
+    r"(?:extract|extraction).*(?:excel|csv|spreadsheet|table|structured data)",
+    r"(?:excel|csv|spreadsheet).*(?:extract|extraction|transform|conversion|convert)",
+    r"(?:csv|excel|spreadsheet).*(?:format|formatting|merge|combine|consolidat)",
+    r"(?:merge|combine|consolidat).*(?:csv|excel|spreadsheet)",
+    r"(?:excel|csv).*(?:mysql|database).*(?:import|insert|update|upsert|sync)",
+    r"(?:mysql|database).*(?:excel|csv).*(?:import|insert|update|upsert|sync)",
+    r"(?:json|xml).*(?:csv|excel|transform|convert)",
+    r"(?:csv|excel).*(?:json|xml|transform|convert)",
 ]
 
 AUTOMATION_INTENT = [
@@ -65,7 +77,7 @@ class Decision:
     reason: str
     bid_amount: Optional[float] = None
     period_days: Optional[int] = None
-    output_hits: Optional[int] = None
+    core_hits: Optional[int] = None
     automation_hits: Optional[int] = None
     currency_code: Optional[str] = None
 
@@ -78,11 +90,11 @@ def _session() -> Session:
 
 
 def _has(blob: str, pats: List[str]) -> bool:
-    return any(re.search(p, blob, re.I) for p in pats)
+    return any(re.search(p, blob, re.I | re.S) for p in pats)
 
 
 def _count(blob: str, pats: List[str]) -> int:
-    return sum(1 for p in pats if re.search(p, blob, re.I))
+    return sum(1 for p in pats if re.search(p, blob, re.I | re.S))
 
 
 def _evaluate(p: Dict[str, Any]) -> Decision:
@@ -95,30 +107,36 @@ def _evaluate(p: Dict[str, Any]) -> Decision:
     if _has(blob, PROHIBITED):
         return Decision(pid, title, "REJECT", -100, "policy/risk pattern", currency_code=currency_code)
     if _has(blob, HUMAN_SPECIFIC):
-        return Decision(pid, title, "REJECT", -50, "specifically human/manual work", currency_code=currency_code)
+        return Decision(pid, title, "REJECT", -50, "specifically human/manual/location work", currency_code=currency_code)
     if _has(blob, REVIEW_ONLY):
-        return Decision(pid, title, "REVIEW", 0, "creative/broad-development/professional-judgment class", currency_code=currency_code)
+        return Decision(pid, title, "REVIEW", 0, "outside proof-stage autonomous data-work envelope", currency_code=currency_code)
 
-    output_hits = _count(blob, STRICT_OUTPUT_PATTERNS)
+    core_hits = _count(blob, CORE_CLASSES)
     automation_hits = _count(blob, AUTOMATION_INTENT)
-
     bid_stats = p.get('bid_stats') or {}
     bid_count = int(bid_stats.get('bid_count') or 0)
-    score = output_hits * 8 + automation_hits * 4 + max(0, 8 - min(8, bid_count / 4))
 
-    # AUTO_BID_READY requires a narrow, objectively verifiable output. Automation intent is
-    # preferred but not mandatory for deterministic file/data transformation work.
-    deterministic_file_job = output_hits >= 2 and _has(blob, [
-        r"excel", r"csv", r"spreadsheet", r"data clean", r"data extraction",
-        r"deduplic", r"normalize", r"reconcil", r"pdf", r"json", r"xml",
-    ])
-    explicit_pipeline = output_hits >= 1 and automation_hits >= 2
+    # Competition only matters after the work itself passes the whitelist.
+    score = core_hits * 12 + automation_hits * 2 + max(0, 6 - min(6, bid_count / 5))
 
-    if not (deterministic_file_job or explicit_pipeline):
+    if core_hits < 1:
         return Decision(
             pid, title, "REVIEW", score,
-            "not narrow enough for autonomous acceptance",
-            output_hits=output_hits, automation_hits=automation_hits,
+            "no exact proof-stage data/file work class matched",
+            core_hits=core_hits, automation_hits=automation_hits,
+            currency_code=currency_code,
+        )
+
+    # Broad deliverables are review-only even if a sentence happens to mention CSV/Excel.
+    if _has(blob, [
+        r"build (?:a |an )?(?:website|platform|application|app|system)",
+        r"develop (?:a |an )?(?:website|platform|application|app)",
+        r"end[- ]to[- ]end (?:application|platform|system)",
+    ]):
+        return Decision(
+            pid, title, "REVIEW", score,
+            "broad build scope despite data keywords",
+            core_hits=core_hits, automation_hits=automation_hits,
             currency_code=currency_code,
         )
 
@@ -127,18 +145,18 @@ def _evaluate(p: Dict[str, Any]) -> Decision:
     maximum = budget.get('maximum')
     amount = float(maximum or minimum or 20)
     if maximum is not None and minimum is not None:
-        # Price in the project's own currency. Do not treat non-USD numeric budgets as dollars.
-        amount = round(float(minimum) + 0.35 * (float(maximum) - float(minimum)), 2)
+        # Conservative proof-stage bid, in the project's own currency.
+        amount = round(float(minimum) + 0.25 * (float(maximum) - float(minimum)), 2)
 
     period = 3 if automation_hits >= 2 or _has(blob, [r"mysql", r"database", r"pipeline"]) else 1
     return Decision(
         pid, title, "AUTO_BID_READY", score,
-        "narrow objective machine-work class with testable deliverable",
-        amount, period, output_hits, automation_hits, currency_code,
+        "exact deterministic data/file work class matched",
+        amount, period, core_hits, automation_hits, currency_code,
     )
 
 
-def run(limit: int = 50):
+def run(limit: int = 60):
     s = _session()
     user_id = get_self_user_id(s)
 
@@ -155,7 +173,7 @@ def run(limit: int = 50):
 
     result = search_projects(
         s,
-        query="Excel CSV spreadsheet data cleaning data extraction PDF Python automation database scraping",
+        query="Excel CSV spreadsheet data cleaning data extraction PDF conversion deduplicate normalize reconcile merge transform",
         search_filter=sf,
         project_details=pd,
         active_only=True,
@@ -168,11 +186,11 @@ def run(limit: int = 50):
     return {
         "ok": True,
         "authenticated_user_id": user_id,
-        "mode": "DRY_RUN_STRICT_AUTO_BID_GATE",
+        "mode": "DRY_RUN_CORE_DATA_ONLY",
         "projects_seen": len(projects),
         "auto_bid_ready_count": len(ready),
-        "auto_bid_ready": [asdict(d) for d in ready[:12]],
-        "top_decisions": [asdict(d) for d in decisions[:25]],
+        "auto_bid_ready": [asdict(d) for d in ready[:15]],
+        "top_decisions": [asdict(d) for d in decisions[:30]],
     }
 
 
